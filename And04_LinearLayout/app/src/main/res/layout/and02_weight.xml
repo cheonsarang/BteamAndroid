@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,25 +9,47 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     >
+=======
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<!-- attr : weight 일정한 비율로 어느정도의 공간을 차지할 것인지를 지정하는 속성-->
+>>>>>>> 9e93d9e7ca7683bd28fa10060ad5fdae79d759e4
 
     <LinearLayout
         android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+<<<<<<< HEAD
         android:background="#45cc2d"
         />
+=======
+        android:background="#A7CDF3"/>
+
+
+>>>>>>> 9e93d9e7ca7683bd28fa10060ad5fdae79d759e4
     <LinearLayout
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+<<<<<<< HEAD
         android:background="#9e5043"
         />
+=======
+        android:background="#FB9DA5"/>
+
+>>>>>>> 9e93d9e7ca7683bd28fa10060ad5fdae79d759e4
     <LinearLayout
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+<<<<<<< HEAD
         android:background="#1b268e"
         />
+=======
+        android:background="#EAF39C"/>
+>>>>>>> 9e93d9e7ca7683bd28fa10060ad5fdae79d759e4
 
 
 </LinearLayout>

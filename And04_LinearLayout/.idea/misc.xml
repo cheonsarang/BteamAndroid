@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Study_Android/WorkSpace/And04_LinearLayout/app/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/Study_Android/WorkSpace/And04_LinearLayout/app/src/main/res/layout/and02_weight.xml" value="0.23324485733244857" />
+=======
+        <entry key="..\:/Study_Android/WorkSpace/And04_LinearLayout/app/src/main/res/layout/activity_main.xml" value="0.25317028985507245" />
+        <entry key="..\:/Study_Android/WorkSpace/And04_LinearLayout/app/src/main/res/layout/and02_weight.xml" value="0.36614583333333334" />
+>>>>>>> 9e93d9e7ca7683bd28fa10060ad5fdae79d759e4
         <entry key="..\:/Study_Android/WorkSpace/And04_LinearLayout/app/src/main/res/layout/and03_weight2.xml" value="0.36614583333333334" />
       </map>
     </option>
