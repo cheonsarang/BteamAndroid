@@ -62,7 +62,11 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 9b807afab23bf43c3a0794ca17839f2c45e64c58
+=======
 >>>>>>> 6a2cd2d82d8a4a33ebedb8bc948b408caf09199d
+>>>>>>> ce1d7428548203d17a3cfe4db818b33aadab0c5b
         </LinearLayout>
 
         <LinearLayout
@@ -113,7 +117,11 @@
 =======
             >
 
+<<<<<<< HEAD
+>>>>>>> 9b807afab23bf43c3a0794ca17839f2c45e64c58
+=======
 >>>>>>> 6a2cd2d82d8a4a33ebedb8bc948b408caf09199d
+>>>>>>> ce1d7428548203d17a3cfe4db818b33aadab0c5b
         </LinearLayout>
 
 
@@ -126,11 +134,32 @@
         android:orientation="horizontal"
         >
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            >
+
+        </LinearLayout>
+=======
+
+>>>>>>> 9b807afab23bf43c3a0794ca17839f2c45e64c58
+
+=======
+>>>>>>> ce1d7428548203d17a3cfe4db818b33aadab0c5b
         <LinearLayout
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
 <<<<<<< HEAD
+<<<<<<< HEAD
+            >
+
+=======
+=======
+>>>>>>> ce1d7428548203d17a3cfe4db818b33aadab0c5b
             android:orientation="vertical"
             android:gravity="center"
             >
@@ -222,8 +251,16 @@
                 android:layout_height="wrap_content"
                 android:text="주문 하기"/>
 
+<<<<<<< HEAD
+
+>>>>>>> 9b807afab23bf43c3a0794ca17839f2c45e64c58
         </LinearLayout>
 
+
+=======
+        </LinearLayout>
+
+>>>>>>> ce1d7428548203d17a3cfe4db818b33aadab0c5b
     </LinearLayout>
 
     <LinearLayout
@@ -237,8 +274,11 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 6a2cd2d82d8a4a33ebedb8bc948b408caf09199d
+>>>>>>> ce1d7428548203d17a3cfe4db818b33aadab0c5b
             >
 
         </LinearLayout>
@@ -254,6 +294,8 @@
 
     </LinearLayout>
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     <LinearLayout
@@ -363,6 +405,7 @@
     </LinearLayout>
 
 >>>>>>> 6a2cd2d82d8a4a33ebedb8bc948b408caf09199d
+>>>>>>> ce1d7428548203d17a3cfe4db818b33aadab0c5b
 
 
 </LinearLayout>
