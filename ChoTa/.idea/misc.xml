@@ -91,6 +91,20 @@
         <entry key="..\:/Study_Android/workspace/ChoTa/app/src/main/res/layout/item_rec_board.xml" value="0.36614583333333334" />
         <entry key="..\:/Study_Android/workspace/ChoTa/app/src/main/res/layout/item_stulist.xml" value="0.5" />
         <entry key="..\:/Study_Android/workspace/ChoTa/app/src/main/res/layout/test.xml" value="0.36614583333333334" />
+<<<<<<< HEAD
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/drawable-v24/item_bot.xml" value="0.38229166666666664" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/activity_bell.xml" value="0.36614583333333334" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/activity_board.xml" value="0.36614583333333334" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/activity_chat.xml" value="0.36614583333333334" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/activity_intro.xml" value="0.36614583333333334" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/activity_schedule.xml" value="0.33489583333333334" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/fragment_find_id1.xml" value="0.36614583333333334" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/fragment_find_pw3.xml" value="0.36614583333333334" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/fragment_my_info_student.xml" value="0.36614583333333334" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/fragment_my_info_teacher.xml" value="0.33" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/item_rec_board.xml" value="0.36614583333333334" />
+=======
         <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/drawable/ic_baseline_clear_24.xml" value="0.30526315789473685" />
         <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.30526315789473685" />
         <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/drawable/ic_baseline_notifications_none_24.xml" value="0.30526315789473685" />
@@ -102,6 +116,7 @@
         <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/navi_header_right.xml" value="0.2916666666666667" />
         <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/menu/bottom_nav.xml" value="0.2916666666666667" />
         <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/menu/tool_bar.xml" value="0.2916666666666667" />
+>>>>>>> 2f1df192969228af6c8b0b2a552b7237b850f632
       </map>
     </option>
   </component>
