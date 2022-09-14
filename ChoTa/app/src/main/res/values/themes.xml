@@ -8,11 +8,13 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/chota_yellow</item>
         <item name="colorSecondaryVariant">@color/grey</item>
+
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
 
     <style name="Theme.ChoTa.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -23,4 +25,5 @@
         <item name="android:textSize">14dp</item>
         <item name="android:textColor">#333</item>
     </style>
+
 </resources>

@@ -1,5 +1,6 @@
 package com.example.chota;
 
+<<<<<<< HEAD
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -34,10 +35,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     MainFragment mainFragment = new MainFragment();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         btm_nav = findViewById(R.id.btm_nav);
 
@@ -139,5 +142,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mainFragment.scrollView.smoothScrollTo(0,0);
             }
         }
-    }
+
+
+
+
 }
