@@ -8,8 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.chota.R;
-import com.example.chota.common.CommonVal;
-import com.example.chota.conn.CommonConn;
+
 import com.google.gson.Gson;
 
 public class InfoDetailActivity extends AppCompatActivity {
@@ -28,17 +27,7 @@ public class InfoDetailActivity extends AppCompatActivity {
         teacher_name = findViewById(R.id.teacher_name);
         nickname = findViewById(R.id.nickname);
 
-        Intent intent = getIntent();
-        int id = intent.getIntExtra("id", 0);
-        CommonConn conn = new CommonConn(this, "detail.info");
-        conn.addParams("id", id);
-        conn.excuteConn(new CommonConn.ConnCallback() {
-            @Override
-            public void onResult(boolean isResult, String data) {
-                vo = new Gson().fromJson(data, MemberVO.class);
-                setWidget(vo);
-            }
-        });
+
     }
 
     public void setWidget(MemberVO vo) {
@@ -52,11 +41,6 @@ public class InfoDetailActivity extends AppCompatActivity {
         }
         school_name.setText(vo.getSchool_id());
         phone_num.setText(vo.getPhone_num());
-        if(CommonVal.loginInfo.getMember_grp().equals("M") || CommonVal.loginInfo.getMember_grp().equals("T")) {
-            teacher_name.setVisibility(View.GONE);
-        }else {
-            teacher_name.setText(vo.getTeacher_name());
-        }
 
     }
 }

@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.example.chota.R;
-import com.example.chota.common.CommonVal;
 
 
 public class M_MyInfoFragment_teacher extends Fragment implements View.OnClickListener{
@@ -42,18 +41,18 @@ public class M_MyInfoFragment_teacher extends Fragment implements View.OnClickLi
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent();
-        if(v.getId() == R.id.myinfo_info) {
-            intent = new Intent(getContext(), InfoDetailActivity.class);
-            intent.putExtra("id", CommonVal.loginInfo.getMember_id());
-        }else if(v.getId() == R.id.scrap_info) {
-            intent = new Intent(getContext(), WritingActivity.class);
-        }else if(v.getId() == R.id.student_info) {
-            intent = new Intent(getContext(), BanActivity.class);
-            intent.putExtra("grade_class_code", CommonVal.loginInfo.getGrade_class_code());
-        }else if(v.getId() == R.id.schedule_info){
-
-        }
-        startActivity(intent);
+//        Intent intent = new Intent();
+//        if(v.getId() == R.id.myinfo_info) {
+//            intent = new Intent(getContext(), InfoDetailActivity.class);
+//            intent.putExtra("id", CommonVal.loginInfo.getMember_id());
+//        }else if(v.getId() == R.id.scrap_info) {
+//            intent = new Intent(getContext(), WritingActivity.class);
+//        }else if(v.getId() == R.id.student_info) {
+//            intent = new Intent(getContext(), BanActivity.class);
+//            intent.putExtra("grade_class_code", CommonVal.loginInfo.getGrade_class_code());
+//        }else if(v.getId() == R.id.schedule_info){
+//
+//        }
+//        startActivity(intent);
     }
 }
