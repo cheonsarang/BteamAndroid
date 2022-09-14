@@ -79,10 +79,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Log.d("탭", "onNavigationItemSelected: 탭4" );
                     toolbar_title.setText("교육정보");
                     getSupportFragmentManager().beginTransaction().replace(R.id.container , new M_EduFragment()).commit();
-                }else if(item.getItemId() == R.id.tab4){
+                }else if(item.getItemId() == R.id.tab5){
                     Log.d("탭", "onNavigationItemSelected: 탭5" );
                     toolbar_title.setText("마이페이지");
-                    getSupportFragmentManager().beginTransaction().replace(R.id.container , new M_MyInfoFragment_teacher()).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container , new M_MyInfoFragment_student()).commit();
                     //student change
                 }
                 return true;
