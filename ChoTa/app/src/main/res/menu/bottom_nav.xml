@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/tab1"
+        android:icon="@drawable/bot_nav1"
+        android:title="홈"
+        android:enabled="true"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/tab2"
+        android:icon="@drawable/bot_nav2"
+        android:title="게시판"
+        android:enabled="true"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/tab3"
+        android:icon="@drawable/bot_nav3"
+        android:title="학교"
+        android:enabled="true"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/tab4"
+        android:icon="@drawable/bot_nav4"
+        android:title="교육"
+        android:enabled="true"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/tab5"
+        android:icon="@drawable/bot_nav5"
+        android:title="내정보"
+        android:enabled="true"
+        app:showAsAction="ifRoom"/>
+
+
+
+</menu>
