@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Log.d("탭", "onNavigationItemSelected: 탭5" );
                     toolbar_title.setText("마이페이지");
                     getSupportFragmentManager().beginTransaction().replace(R.id.container , new M_MyInfoFragment_teacher()).commit();
+                    //student change
                 }
                 return true;
             }
