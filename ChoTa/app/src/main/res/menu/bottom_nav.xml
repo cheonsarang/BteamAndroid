@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+        showAction 보이는 설정
+        always => 항상 보여주게 처리
+        never => 안보이게 처리
+        ifRoom => 공간이 있을때 표시
+
+    -->
+    <item android:id="@+id/tab1"
+        android:icon="@drawable/nav_home"
+        android:title="홈"
+        android:enabled="true"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/tab2"
+        android:icon="@drawable/nav_board"
+        android:title="게시판"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/tab3"
+        android:icon="@drawable/nav_school"
+        android:title="학교"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/tab4"
+        android:icon="@drawable/nav_education"
+        android:title="교육"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/tab5"
+        android:icon="@drawable/nav_user"
+        android:title="내정보"
+        app:showAsAction="always"/>
+
+</menu>
