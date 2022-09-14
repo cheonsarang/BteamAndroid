@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[ "
+                android:textColor="#fff"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/item_school_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가정통신문"
+                android:textColor="#fff"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ]"
+                android:textColor="#fff"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:id="@+id/item_school_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9월 1일 목요일"
+                android:textColor="#fff"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="20dp"
+                android:textSize="16dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_school_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="어린이 안전 교육"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:textSize="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <TextView
+            android:id="@+id/item_school_context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="어린이 안전 교육(횡단보도 건널 때 3가지 수칙"
+            android:textColor="#333"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/item_school_img_id"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/popup1"
+            android:visibility="visible"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
