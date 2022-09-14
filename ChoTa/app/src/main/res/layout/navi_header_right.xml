@@ -37,18 +37,19 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingTop="16dp"
-                        android:text="안효은"
+                        android:text="유라헬"
                         android:textStyle="bold"
                         android:textSize="18dp"
                         android:textColor="#222222"
                         />
 
                     <ImageView
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="10dp"
                         android:id="@+id/avi_profile_school"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:background="@drawable/ic_launcher_foreground"
-                        />
+                        android:background="@drawable/weeang" />
 
                     <LinearLayout
                         android:layout_weight="1"
@@ -60,7 +61,7 @@
                         android:layout_gravity="start"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:background="@drawable/ic_launcher_foreground"
+                        android:background="@drawable/ic_baseline_clear_24"
                         />
 
                 </LinearLayout>
