@@ -16,10 +16,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.chota.board.M_BoardFragment;
 import com.example.chota.main.HomeActivity;
 import com.example.chota.main.M_EduFragment;
 import com.example.chota.main.M_SchoolFragment;
 import com.example.chota.main.MainFragment;
+import com.example.chota.myInfo.M_MyInfoFragment_student;
+import com.example.chota.myInfo.M_MyInfoFragment_teacher;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -66,8 +69,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     getSupportFragmentManager().beginTransaction().replace(R.id.container , mainFragment).commit();
                 }else if(item.getItemId() == R.id.tab2){
                     Log.d("탭", "onNavigationItemSelected: 탭2" );
-                    toolbar_title.setText("톡톡 게시판");
-                    getSupportFragmentManager().beginTransaction().replace(R.id.container , mainFragment).commit();
+                    toolbar_title.setText("게시판");
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container , new M_BoardFragment()).commit();
                 }else if(item.getItemId() == R.id.tab3){
                     Log.d("탭", "onNavigationItemSelected: 탭3" );
                     toolbar_title.setText("우리 학교는");
@@ -79,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }else if(item.getItemId() == R.id.tab4){
                     Log.d("탭", "onNavigationItemSelected: 탭5" );
                     toolbar_title.setText("마이페이지");
-                    getSupportFragmentManager().beginTransaction().replace(R.id.container , mainFragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container , new M_MyInfoFragment_teacher()).commit();
                 }
                 return true;
             }
