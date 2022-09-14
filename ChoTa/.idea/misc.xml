@@ -91,8 +91,10 @@
         <entry key="..\:/Study_Android/workspace/ChoTa/app/src/main/res/layout/item_rec_board.xml" value="0.36614583333333334" />
         <entry key="..\:/Study_Android/workspace/ChoTa/app/src/main/res/layout/item_stulist.xml" value="0.5" />
         <entry key="..\:/Study_Android/workspace/ChoTa/app/src/main/res/layout/test.xml" value="0.36614583333333334" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/drawable/nav_home.xml" value="0.30526315789473685" />
         <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/layout/fragment_my_info_teacher.xml" value="0.12318840579710146" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/menu/bottom_nav.xml" value="0.2916666666666667" />
+        <entry key="..\:/Study_Git/BteamAndroid/ChoTa/app/src/main/res/menu/tool_bar.xml" value="0.2916666666666667" />
       </map>
     </option>
   </component>

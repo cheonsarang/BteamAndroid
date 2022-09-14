@@ -3,12 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/search"
-        android:title="검색"
-        android:icon="@drawable/ic_launcher_foreground"
-        app:showAsAction="always"/>
-
-    <item
         android:id="@+id/menu1"
         android:title="알람"
         android:icon="@drawable/ic_launcher_foreground"

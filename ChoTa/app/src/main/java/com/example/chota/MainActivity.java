@@ -106,11 +106,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return true;
             }
 
-            case R.id.search:{
-            }
 
             case R.id.menu1:{
-                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                Intent intent = new Intent(MainActivity.this, BellActivity.class);
                 intent.putExtra("index",1);
                 startActivity(intent);
                 return true;
