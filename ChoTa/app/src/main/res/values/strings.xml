@@ -21,4 +21,16 @@
     <string name="title_activity_navi_draw">NaviDrawActivity</string>
     <string name="title_activity_navidraw">NavidrawActivity</string>
 
+    <!--  이메일 스피너 선택  -->
+    <string-array name="planets_array">
+        <item>선택</item>
+        <item>naver.com</item>
+        <item>kakao.com</item>
+        <item>google.com</item>
+        <item>hanmail.net</item>
+        <item>직접입력</item>
+
+    </string-array>
+    <string name="title_activity_bell">BellActivity</string>
+
 </resources>
