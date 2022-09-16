@@ -2,14 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.chota">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.SEND_SMS" />
-    <!-- SMS 이용하기위해 -->
-
 
     <application
         android:allowBackup="true"
@@ -20,13 +16,14 @@
         android:theme="@style/Theme.ChoTa"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".board.Board3Activity"
+            android:exported="true" />
+        <activity
             android:name=".main.HomeActivity"
             android:exported="true" />
         <activity
             android:name=".school.SchoolActivity"
             android:exported="true" />
-       
-
         <activity
             android:name=".myInfo.Schedule_Activity"
             android:exported="true" />
@@ -42,7 +39,6 @@
         <activity
             android:name=".myInfo.InfoDetailActivity"
             android:exported="true" />
- 
         <activity
             android:name=".WriteActivity"
             android:exported="true" />
@@ -64,7 +60,6 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
-
         <activity
             android:name=".SplashActivity"
             android:exported="true">

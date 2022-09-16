@@ -3,6 +3,8 @@ package com.example.chota.join;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -15,6 +17,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.chota.R;
+
+import java.text.DateFormat;
+import java.text.FieldPosition;
+import java.text.ParsePosition;
+import java.util.Date;
 
 
 public class Join2Fragment extends Fragment {
@@ -46,7 +53,12 @@ public class Join2Fragment extends Fragment {
         btn_prev = v.findViewById(R.id.btn_prev);
 
 
+        edt_birth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
 
 
         //다음 버튼 눌렀을때

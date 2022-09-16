@@ -32,7 +32,7 @@ public class InfoDetailActivity extends AppCompatActivity {
 
     public void setWidget(MemberVO vo) {
         member_id.setText(vo.getMember_id());
-        userpw.setText(vo.getUserpw());
+        userpw.setText(vo.getMember_pw());
         name.setText(vo.getName());
         if(vo.getNickname() != null) {
             nickname.setText(vo.getNickname());

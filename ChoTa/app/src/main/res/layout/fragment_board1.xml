@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".board.M_BoardFragment">
+    tools:context=".board.M_Board1Fragment"
+    android:id="@+id/container">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -125,7 +126,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:id="@+id/linear_1"
                         >
                         <TextView
                             android:layout_width="wrap_content"
@@ -138,6 +138,7 @@
                             android:gravity="center"
                             />
                         <LinearLayout
+                            android:id="@+id/linear_top1"
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -179,7 +180,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:id="@+id/linear_2"
                         >
 
                         <TextView
@@ -192,6 +192,7 @@
                             android:textSize="20dp"
                             android:textStyle="bold" />
                         <LinearLayout
+                            android:id="@+id/linear_top2"
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -233,7 +234,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:id="@+id/linear_3"
+
                         >
 
                         <TextView
@@ -246,6 +247,7 @@
                             android:textSize="20dp"
                             android:textStyle="bold" />
                         <LinearLayout
+                            android:id="@+id/linear_top3"
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -287,7 +289,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:id="@+id/linear_4"
                         >
 
                         <TextView
@@ -300,6 +301,7 @@
                             android:textSize="20dp"
                             android:textStyle="bold" />
                         <LinearLayout
+                            android:id="@+id/linear_top4"
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"

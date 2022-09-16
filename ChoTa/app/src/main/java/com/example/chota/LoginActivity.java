@@ -7,16 +7,21 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.chota.common.CommonMethod;
+import com.example.chota.common.CommonVal;
+import com.example.chota.conn.CommonConn;
 import com.example.chota.find.FindId1Fragment;
 import com.example.chota.find.FindPw1Fragment;
+import com.example.chota.myInfo.MemberVO;
+import com.google.gson.Gson;
 import com.navercorp.nid.oauth.view.NidOAuthLoginButton;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
@@ -26,6 +31,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     Button btn_login;
     ImageView btn_kakao;
     FrameLayout container, frame;
+    CheckBox chk_login;
 
 
 
@@ -44,6 +50,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btn_naver = findViewById(R.id.btn_naver);
         container = findViewById(R.id.container);
         frame = findViewById(R.id.frame);
+        chk_login = findViewById(R.id.chk_login);
+
+
 
         tv_find_id.setOnClickListener(this);
         tv_find_pw.setOnClickListener(this);
@@ -51,13 +60,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         tv_join.setOnClickListener(this);
 
 
-
+        //saveLoginInfo();
         //자동로그인 공유자원)  //단점 : 사용자가 앱정보에서 스토리지&캐시를 맘대로 지울수 있는 부분이다
         SharedPreferences preferences = getPreferences(MODE_PRIVATE); //해당하는 액티비티에서만 쓰는것 private
         String userid = preferences.getString("id", "--");  //공유자원에 데이터를 저장을 해놨을때 읽는 방법 (지금은 디폴트값 들어옴)
         String userpw = preferences.getString("pw", "--");  //공유자원에 데이터를 저장을 해놨을때 읽는 방법 (지금은 디폴트값 들어옴)
         Log.d("공유자원", "onCreate: " + userid + " : " + userpw);
 
+        //자동 로그인기능
+        if(!userid.equals("--") && !userpw.equals("--")) {
+            chk_login.setChecked(true);
+            edt_id.setText(userid);
+            edt_pw.setText(userpw);
+            login();    //<- 만들어진 기능은 로직에 따라서 다시 사용이 가능하게 한다.
+        }
 
     }
 
@@ -66,16 +82,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Intent intent;
 
         if(v == btn_login){ //로그인
-            if(edt_id.getText().toString().equals("") || edt_pw.getText().toString().equals("")){
-                Toast.makeText(LoginActivity.this, "빈칸을 채워주세요", Toast.LENGTH_SHORT).show();
+            if(CommonMethod.isCheckEditText(edt_id)&& CommonMethod.isCheckEditText(edt_pw)) {//체크된 값이 true라면 로그인해라
 
-            }else if(!edt_id.getText().toString().equals("admin") || !edt_pw.getText().toString().equals("admin01")){
-                Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호가 틀림", Toast.LENGTH_SHORT).show();
-                edt_id.setText("");//pw
-                edt_pw.setText("");//id
+                //미들웨어 접근
+                login();
+
             }else {
-                intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
+                Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show();
+
 
             }
         }else if(v == tv_find_id){  //아이디 찾기 페이지 이동
@@ -94,6 +108,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             startActivity(intent);
 
         }
+
+
 
 
         //NaverIdLoginSDK.initialize(context, {OAUTH_CLIENT_ID}, {OAUTH_CLIENT_SECRET}, {OAUTH_CLIENT_NAME})
@@ -233,7 +249,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //    }
 
     // 메소드안에 바뀌어야될부분이 고정되어있으면 재활용이 힘든 메소드.
-    // => editText로 고정되어있던부분을 파라메터로 빼주기만하면 재활용이 가능한구조가됨
+    // => editText로 고정되어있던부분을 파라메터로 빼주기만하면 재활용이 가능한구조가됨   소셜로그인은 아이디가 이메일형식으로 저장
 //    public void login(String email, String pw, String social_yn){
 //        CommonConn conn = new CommonConn("andlogin", LoginActivity.this);
 //        conn.addParams("email", email);
@@ -287,5 +303,49 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //                Log.e("KeyHash", "Unable to get MessageDigest. signature=" + signature, e);
 //            }
 //        }
-//    }
+
+
+    //db 연결 로그인메소드
+    public void login(){
+        CommonConn conn = new CommonConn("login", LoginActivity.this);
+        conn.addParams("userid", edt_id.getText()+"");
+        conn.addParams("userpw", edt_pw.getText()+"");
+        conn.excuteConn(new CommonConn.ConnCallback() {
+            @Override
+            public void onResult(boolean isResult, String data) {
+                if(isResult) {
+                    Log.d("data", "onResult: " + data);
+                    CommonVal.loginInfo = new Gson().fromJson(data, MemberVO.class);//연결된 데이터값을 공통값에 초기화
+                    if(CommonVal.loginInfo==null){
+                        Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호가 틀림", Toast.LENGTH_SHORT).show();
+                    }else {
+                        //자동로그인은 유저가 선택하기 때문에 자동로그인이 체크가 되었는지를 판단하고 체크가 되었을때만! 저장이 되어야함.
+                        if(chk_login.isChecked()){
+                            saveLoginInfo();
+                        }
+
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+
+                }
+
+            }
+        });
+
+    }//login()
+
+
+    public void saveLoginInfo(){//공유자원 메소드
+        SharedPreferences preferences = getPreferences(MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();//edit() <- Editor객체를 리턴하는 메소드
+        editor.putString("id", CommonVal.loginInfo.getMember_id());  //아이디 자동 저장
+        editor.putString("pw", CommonVal.loginInfo.getMember_pw());  //비밀번호 자동 저장
+
+        editor.apply(); //확정지어줘야함
+
+    }//saveLoginInfo
+
+
+
 }

@@ -1,0 +1,68 @@
+package com.example.chota.board;
+
+import android.content.Intent;
+import android.os.Bundle;
+
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+
+import com.example.chota.BoardActivity;
+import com.example.chota.R;
+import com.example.chota.WriteActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+
+public class M_Board1Fragment extends Fragment {
+    FloatingActionButton btn_write;
+    LinearLayout linear_top1, linear_top2, linear_top3, linear_top4;
+    CardView card_5;
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        View v = inflater.inflate(R.layout.fragment_board1, container, false);
+
+        linear_top1 = v.findViewById(R.id.linear_top1);
+        linear_top2 = v.findViewById(R.id.linear_top2);
+        linear_top3 = v.findViewById(R.id.linear_top3);
+        linear_top4 = v.findViewById(R.id.linear_top4);
+        card_5 = v.findViewById(R.id.card_5);
+        btn_write = v.findViewById(R.id.btn_write);
+
+
+
+        linear_top1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent intent = new Intent(getContext(), Board3Activity.class);
+               startActivity(intent);
+
+
+            }
+        });
+
+
+
+        //글쓰기 버튼
+        btn_write.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(), WriteActivity.class);
+                    startActivity(intent);
+            }
+        });
+
+
+
+
+        return v;
+    }
+}

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -50,6 +51,17 @@ public class Board3Fragment extends Fragment {
         edt_reply = v.findViewById(R.id.edt_reply);
 
         recv_reply = v.findViewById(R.id.recv_reply);
+
+
+        Board3_Adapter adapter = new Board3_Adapter(inflater);
+        LinearLayoutManager manager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
+        recv_reply.setLayoutManager(manager);
+        recv_reply.setAdapter(adapter);
+
+
+
+
+
 
         //뒤로가기
         image_back.setOnClickListener(new View.OnClickListener() {

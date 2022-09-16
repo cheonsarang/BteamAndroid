@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class MemberVO implements Serializable {
     private String member_id;
     private String member_grp;
-    private String userpw;
+    private String member_pw;
     private String name;
     private String phone_num;
     private String parent_phone;
@@ -58,12 +58,12 @@ public class MemberVO implements Serializable {
         this.member_grp = member_grp;
     }
 
-    public String getUserpw() {
-        return userpw;
+    public String getMember_pw() {
+        return member_pw;
     }
 
-    public void setUserpw(String userpw) {
-        this.userpw = userpw;
+    public void setMember_pw(String userpw) {
+        this.member_pw = userpw;
     }
 
     public String getName() {
