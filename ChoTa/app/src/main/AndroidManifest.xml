@@ -18,6 +18,9 @@
         <activity
             android:name=".board.Board3Activity"
             android:exported="true" />
+         <activity           
+            android:name=".chat.ChatActivity"
+            android:exported="true" />
         <activity
             android:name=".main.HomeActivity"
             android:exported="true" />

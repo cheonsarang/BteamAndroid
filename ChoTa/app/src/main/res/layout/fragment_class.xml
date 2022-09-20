@@ -1,115 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".school.ClassFragment"
-    android:orientation="vertical">
+    android:background="@color/grey_light"
+    >
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs_class"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tabs_class"
-        app:tabMode="fixed"
         app:tabGravity="fill"
-        app:tabSelectedTextColor="@color/chota_blue"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/green"
         app:tabTextColor="#333"
+        android:background="@color/transparent"
         />
 
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
+        android:layout_marginTop="-3dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
 
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <FrameLayout
+            <LinearLayout
+                android:id="@+id/linear_class1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
 
-                <LinearLayout
-                    android:id="@+id/linear_class1"
+                <ListView
+                    android:id="@+id/listView_class1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="visible"
-                    >
+                    android:layout_height="match_parent"
+                    android:listSelector="#FFEE58"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:background="@color/white"
+                    />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="알림장"/>
+            </LinearLayout>
 
-                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_class2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible">
 
-                <LinearLayout
-                    android:id="@+id/linear_class2"
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="invisible"
-                    >
+                    android:layout_height="500dp"
+                    android:src="@drawable/class_calendar"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="일정"/>
+            </LinearLayout>
 
-                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_class3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible">
 
-                <LinearLayout
-                    android:id="@+id/linear_class3"
+                <ImageView
                     android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:src="@drawable/class_schedule"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_class4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="invisible"
-                    >
+                    android:text="상담" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="상담"/>
+            </LinearLayout>
 
-                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_class5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="invisible">
 
-                <LinearLayout
-                    android:id="@+id/linear_class4"
+                <ListView
+                    android:id="@+id/listView_class5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="invisible"
-                    >
+                    android:layout_height="match_parent"
+                    android:listSelector="#FFEE58"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:background="@color/white"
+                    />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="시간표"/>
+            </LinearLayout>
 
-                </LinearLayout>
+        </FrameLayout>
 
-                <LinearLayout
-                    android:id="@+id/linear_class5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="invisible"
-                    >
+    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="자유게시판"/>
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-        </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

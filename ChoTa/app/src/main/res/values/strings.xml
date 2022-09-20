@@ -7,6 +7,8 @@
     <string name="arrow_right">\u203A</string>
     <string name="arrow_left">\u2039</string>
     <string name="dot_center">\u2024</string>
+    <string name="middle_dot">\u00B7</string>
+
     <string name="title_activity_menu">MenuActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

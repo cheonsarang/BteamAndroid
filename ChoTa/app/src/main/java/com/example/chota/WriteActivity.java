@@ -38,7 +38,12 @@ public class WriteActivity extends AppCompatActivity {
         tv_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 onBackPressed();
+
+                intent = new Intent(WriteActivity.this, BoardActivity.class);
+                startActivity(intent);
+
             }
         });
 

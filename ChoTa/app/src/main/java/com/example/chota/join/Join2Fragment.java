@@ -61,6 +61,7 @@ public class Join2Fragment extends Fragment {
         });
 
 
+
         //다음 버튼 눌렀을때
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override

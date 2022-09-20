@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/middle_dot"
+            android:textColor="#333"
+            android:textStyle="bold"
+            android:layout_marginRight="6dp"
+            android:textSize="13dp"
+            />
+
+        <TextView
+            android:id="@+id/schoolpost_text"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="태풍에 주의하세요"
+            android:textColor="#333"
+            android:textSize="13dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

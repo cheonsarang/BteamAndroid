@@ -7,6 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".education.M_EduFragment"
     android:orientation="vertical">
+>
 
 
     <ScrollView
@@ -17,16 +18,42 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="250dp">
-                <Button
-                    android:id="@+id/edu1_locate"
-                    android:layout_width="110dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="14dp"
-                    android:layout_marginTop="78dp"
-                    android:background="#00ff0000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="130dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn1"
+                        android:layout_width="0dp"
+                        android:layout_height="110dp"
+                        android:layout_weight="1"
+                        android:background="#00ff0000" />
+
+                    <Button
+                        android:id="@+id/btn2"
+                        android:layout_width="0dp"
+                        android:layout_height="110dp"
+                        android:layout_weight="1"
+                        android:background="#00ff0000" />
+
+                    <Button
+                        android:id="@+id/btn3"
+                        android:layout_width="0dp"
+                        android:layout_height="110dp"
+                        android:layout_weight="1"
+                        android:background="#00ff0000" />
+
+                </LinearLayout>
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="192dp"
@@ -42,14 +69,17 @@
                         android:orientation="horizontal"
                         android:paddingStart="20dp"
                         android:paddingTop="50dp">
+
+
                         <TextView
+                            android:id="@+id/school_name_edu"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="금호"
                             android:fontFamily="@font/othic"
-                            android:textSize="20dp"
+                            android:text="금호"
                             android:textColor="#FFFFFF"
-                            android:id="@+id/school_name_edu"/>
+                            android:textSize="20dp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -58,38 +88,44 @@
                             android:textColor="#FFFFFF"
                             android:text="초등학교" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:paddingStart="20dp"
                         android:paddingTop="75dp">
+
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/othic"
                             android:text="주변"
-                            android:fontFamily="@font/othic"
-                            android:textSize="18dp"
-                            android:textColor="#FFFFFF" />
+                            android:textColor="#FFFFFF"
+                            android:textSize="18dp" />
+
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="1,468 포맷필요"
-                            android:fontFamily="@font/othic"
-                            android:textSize="18dp"
-                            android:textColor="#FFE300"
                             android:id="@+id/num_edu"
-                            android:layout_marginStart="5dp"/>
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/othic"
+                            android:text="1,468 포맷필요"
+                            android:textColor="#FFE300"
+                            android:textSize="18dp" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="개의 교육시설"
-                            android:fontFamily="@font/othic"
-                            android:textSize="18dp"
                             android:layout_marginStart="5dp"
-                            android:textColor="#FFFFFF"/>
+                            android:fontFamily="@font/othic"
+                            android:text="개의 교육시설"
+                            android:textColor="#FFFFFF"
+                            android:textSize="18dp" />
                     </LinearLayout>
                 </FrameLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -113,6 +149,7 @@
                         app:cardElevation="10dp">
 
                         <LinearLayout
+                            android:id="@+id/edu_linear1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

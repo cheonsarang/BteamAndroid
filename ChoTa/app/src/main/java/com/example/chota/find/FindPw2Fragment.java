@@ -53,6 +53,7 @@ public class FindPw2Fragment extends Fragment {
 
         //확인버튼
        btn_next.setOnClickListener(new View.OnClickListener() {
+        btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

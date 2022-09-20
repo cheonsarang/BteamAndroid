@@ -39,21 +39,21 @@
                         >
 
                         <LinearLayout
-                            android:layout_width="54dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="10dp"
                             android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/tv_school1"
-                                android:layout_width="53dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="우리학교"
                                 android:textColor="#222"
                                 android:textStyle="bold" />
 
                             <View
-                                android:layout_width="53dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="3dp"
                                 android:layout_marginTop="2dp"
                                 android:background="@color/chota_blue" />
@@ -106,7 +106,7 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="0dp"
-                                android:layout_height="160dp"
+                                android:layout_height="170dp"
                                 android:layout_weight="1"
                                 app:cardBackgroundColor="#fff"
                                 app:cardCornerRadius="12dp"
@@ -304,7 +304,7 @@
                                 android:layout_width="13dp"
                                 android:layout_height="13dp"
                                 android:layout_marginRight="10dp"
-                                android:src="@drawable/ic_launcher_foreground" />
+                                android:src="@drawable/ic_baseline_search_24" />
 
                         </LinearLayout>
 
@@ -323,8 +323,9 @@
                                 android:layout_width="0dp"
                                 android:layout_height="200dp"
                                 android:background="@drawable/background_m_school_basic"
-                                android:layout_marginRight="6dp"
+                                android:layout_marginRight="4dp"
                                 android:orientation="vertical"
+                                android:padding="20dp"
                                 >
 
                                 <LinearLayout
@@ -332,7 +333,7 @@
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal"
                                     android:gravity="center"
-                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="10dp"
                                     >
 
                                     <ImageView
@@ -351,6 +352,16 @@
 
                                 </LinearLayout>
 
+                                <ListView
+                                    android:id="@+id/school3_1_listview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:listSelector="#FFEE58"
+                                    android:divider="@null"
+                                    android:dividerHeight="0dp"
+                                    android:background="@color/white"
+                                    />
+
                             </LinearLayout>
 
                             <!-- 챕터 - 급식 -->
@@ -360,8 +371,9 @@
                                 android:layout_width="0dp"
                                 android:layout_height="200dp"
                                 android:background="@drawable/background_m_school_basic"
-                                android:layout_marginRight="6dp"
+                                android:layout_marginLeft="4dp"
                                 android:orientation="vertical"
+                                android:padding="20dp"
                                 >
 
                                 <LinearLayout
@@ -369,7 +381,7 @@
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal"
                                     android:gravity="center"
-                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="10dp"
                                     >
 
                                     <ImageView
@@ -387,6 +399,12 @@
                                         />
 
                                 </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/school3_2_meal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="example"/>
 
                             </LinearLayout>
 
@@ -409,8 +427,9 @@
                                 android:layout_width="0dp"
                                 android:layout_height="200dp"
                                 android:background="@drawable/background_m_school_basic"
-                                android:layout_marginRight="6dp"
+                                android:layout_marginRight="4dp"
                                 android:orientation="vertical"
+                                android:padding="20dp"
                                 >
 
                                 <LinearLayout
@@ -418,7 +437,7 @@
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal"
                                     android:gravity="center"
-                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="10dp"
                                     >
 
                                     <ImageView
@@ -437,6 +456,16 @@
 
                                 </LinearLayout>
 
+                                <ListView
+                                    android:id="@+id/school3_3_listview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:listSelector="#FFEE58"
+                                    android:divider="@null"
+                                    android:dividerHeight="0dp"
+                                    android:background="@color/white"
+                                    />
+
                             </LinearLayout>
 
                             <!-- 챕터 - 공지사항 -->
@@ -446,8 +475,9 @@
                                 android:layout_width="0dp"
                                 android:layout_height="200dp"
                                 android:background="@drawable/background_m_school_basic"
-                                android:layout_marginRight="6dp"
+                                android:layout_marginLeft="4dp"
                                 android:orientation="vertical"
+                                android:padding="20dp"
                                 >
 
                                 <LinearLayout
@@ -455,7 +485,7 @@
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal"
                                     android:gravity="center"
-                                    android:layout_marginTop="16dp"
+                                    android:layout_marginBottom="10dp"
                                     >
 
                                     <ImageView
@@ -473,6 +503,16 @@
                                         />
 
                                 </LinearLayout>
+
+                                <ListView
+                                    android:id="@+id/school3_4_listview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:listSelector="#FFEE58"
+                                    android:divider="@null"
+                                    android:dividerHeight="0dp"
+                                    android:background="@color/white"
+                                    />
 
                             </LinearLayout>
 
@@ -510,21 +550,20 @@
                             android:textColor="#333" />
 
                         <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:orientation="vertical">
 
                             <TextView
                                 android:id="@+id/tv_class2"
-                                android:layout_width="40dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="우리반"
                                 android:textColor="#222"
                                 android:textStyle="bold" />
 
                             <View
-                                android:layout_width="40dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="3dp"
                                 android:layout_marginTop="2dp"
                                 android:background="@color/chota_blue" />
@@ -532,12 +571,14 @@
 
                         <LinearLayout
                             android:id="@+id/all2"
-                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:gravity="center"
+                            android:gravity="end"
                             android:orientation="horizontal">
 
                             <TextView
+                                android:layout_gravity="center_vertical"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="4dp"
@@ -545,6 +586,7 @@
                                 android:textColor="#999" />
 
                             <ImageView
+                                android:layout_gravity="center_vertical"
                                 android:layout_width="14dp"
                                 android:layout_height="14dp"
                                 android:src="@drawable/main7_icon" />
@@ -570,7 +612,7 @@
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="0dp"
-                                android:layout_height="120dp"
+                                android:layout_height="130dp"
                                 android:layout_weight="1"
                                 app:cardBackgroundColor="#fff"
                                 app:cardCornerRadius="12dp"
@@ -715,7 +757,7 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_marginTop="6dp"
-                                                android:text="상담"
+                                                android:text="시간표"
                                                 android:textColor="#333"
                                                 android:textSize="12dp" />
 
@@ -733,7 +775,7 @@
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_marginTop="6dp"
-                                                android:text="시간표"
+                                                android:text="상담"
                                                 android:textColor="#333"
                                                 android:textSize="12dp" />
 
@@ -789,7 +831,7 @@
                                 android:layout_width="13dp"
                                 android:layout_height="13dp"
                                 android:layout_marginRight="10dp"
-                                android:src="@drawable/ic_launcher_foreground" />
+                                android:src="@drawable/ic_baseline_search_24" />
 
                         </LinearLayout>
 
