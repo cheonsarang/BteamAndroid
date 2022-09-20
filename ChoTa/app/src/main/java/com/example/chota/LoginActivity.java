@@ -54,6 +54,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btn_naver = findViewById(R.id.btn_naver);
         container = findViewById(R.id.container);
         frame = findViewById(R.id.frame);
+        chk_login = findViewById(R.id.chk_login);
+
+
 
         chk_login = findViewById(R.id.chk_login);
 
@@ -90,22 +93,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if(v == btn_login){ //로그인
             if(CommonMethod.isCheckEditText(edt_id)&& CommonMethod.isCheckEditText(edt_pw)) {//체크된 값이 true라면 로그인해라
 
+//임시로그인코드
+                if(edt_id.getText().toString().equals(1+"") && edt_pw.getText().toString().equals(1+"")){
+                    intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+
                 //미들웨어 접근
-                login();
+                //login();
 
             }else {
                 Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호를 입력하세요.", Toast.LENGTH_SHORT).show();
 
-            if(edt_id.getText().toString().equals("") || edt_pw.getText().toString().equals("")){
-                Toast.makeText(LoginActivity.this, "빈칸을 채워주세요", Toast.LENGTH_SHORT).show();
-
-            }else if(!edt_id.getText().toString().equals("admin") || !edt_pw.getText().toString().equals("admin01")){
-                Toast.makeText(LoginActivity.this, "아이디 또는 비밀번호가 틀림", Toast.LENGTH_SHORT).show();
-                edt_id.setText("");//pw
-                edt_pw.setText("");//id
-            }else {
-                intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
 
 
             }
@@ -338,9 +337,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }else {
                         //자동로그인은 유저가 선택하기 때문에 자동로그인이 체크가 되었는지를 판단하고 체크가 되었을때만! 저장이 되어야함.
                         if(chk_login.isChecked()){
+<<<<<<< HEAD
                             Log.d("정보", "onResult: " + CommonVal.loginInfo.getUserid());
                             Log.d("정보", "onResult: " + CommonVal.loginInfo.getUserpw());
                             Log.d("정보", "onResult: " + CommonVal.loginInfo.getSchool_name());
+=======
+>>>>>>> 70302d5284473031944cc1e4a821608592d3514e
                             saveLoginInfo();
                         }
 

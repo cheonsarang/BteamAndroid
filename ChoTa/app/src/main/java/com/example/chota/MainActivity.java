@@ -24,7 +24,6 @@ import com.example.chota.main.M_EduFragment;
 import com.example.chota.main.M_SchoolFragment;
 import com.example.chota.main.MainFragment;
 import com.example.chota.myInfo.M_MyInfoFragment_student;
-
 import com.example.chota.myInfo.M_MyInfoFragment_teacher;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -142,6 +141,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else{
             super.onBackPressed();
         }
+
+        finish();
+
     }
 
     @Override

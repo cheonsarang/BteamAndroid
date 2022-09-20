@@ -21,7 +21,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class M_Board1Fragment extends Fragment {
     FloatingActionButton btn_write;
     LinearLayout linear_top1, linear_top2, linear_top3, linear_top4;
-    CardView card_5;
+    CardView card_select, card_1, card_2;
 
 
     @Override
@@ -34,11 +34,13 @@ public class M_Board1Fragment extends Fragment {
         linear_top2 = v.findViewById(R.id.linear_top2);
         linear_top3 = v.findViewById(R.id.linear_top3);
         linear_top4 = v.findViewById(R.id.linear_top4);
-        card_5 = v.findViewById(R.id.card_5);
+        card_select = v.findViewById(R.id.card_select);
+        card_1 = v.findViewById(R.id.card_1);
+        card_2 = v.findViewById(R.id.card_2);
         btn_write = v.findViewById(R.id.btn_write);
 
 
-
+        //인기 1위글 눌렀을때 상세페이지로 가기
         linear_top1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,8 +57,16 @@ public class M_Board1Fragment extends Fragment {
         btn_write.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Intent intent = new Intent(getActivity(), WriteActivity.class);
-                    startActivity(intent);
+                Intent intent = new Intent(getActivity(), WriteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //카테고리 이미지 눌렀을때 카테고리목록으로 가기
+        card_select.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new Board2Fragment()).commit();
             }
         });
 

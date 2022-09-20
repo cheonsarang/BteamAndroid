@@ -25,11 +25,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="51dp"
-<<<<<<< HEAD
             android:layout_marginTop="30dp"
-=======
-            android:layout_marginTop="40dp"
->>>>>>> 5bdcad1b4e4919de5623dc614871d8fa44ac1491
             android:textStyle="bold"
             android:textColor="@color/chota_black"
             android:text="로그인"
@@ -137,12 +133,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-<<<<<<< HEAD
-
             android:layout_marginBottom="60dp">
-=======
-            android:layout_marginBottom="100dp">
->>>>>>> 5bdcad1b4e4919de5623dc614871d8fa44ac1491
 
             <CheckBox
                 android:id="@+id/chk_login"
@@ -161,10 +152,6 @@
             <TextView
                 android:id="@+id/tv_find_id"
                 android:layout_width="wrap_content"
-<<<<<<< HEAD
-
-=======
->>>>>>> 5bdcad1b4e4919de5623dc614871d8fa44ac1491
                 android:layout_height="wrap_content"
                 android:text="아이디 찾기"
                 android:textSize="15dp"
@@ -228,10 +215,6 @@
             android:textColor="@color/chota_blue"
             android:layout_marginTop="30dp"
             android:gravity="center"
-<<<<<<< HEAD
-
-=======
->>>>>>> 5bdcad1b4e4919de5623dc614871d8fa44ac1491
             />
 
 

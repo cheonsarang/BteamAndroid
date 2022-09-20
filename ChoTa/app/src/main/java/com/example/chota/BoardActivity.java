@@ -17,6 +17,7 @@ public class BoardActivity extends AppCompatActivity {
     M_Board1Fragment board1Fragment;
     Board2Fragment board2Fragment;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
