@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="게시판종류">
+        <item>게시판 선택</item>
+        <item>자유게시판</item>
+        <item>공부</item>
+        <item>관심</item>
+        <item>고민상담</item>
+        <item>우리학교</item>
+        <item>일상</item>
+
+    </string-array>
+
+</resources>

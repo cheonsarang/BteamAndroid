@@ -9,7 +9,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/grey_light"
+        >
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs_school"
@@ -17,14 +19,21 @@
             android:layout_height="wrap_content"
             app:tabGravity="fill"
             app:tabMode="fixed"
-            app:tabSelectedTextColor="@color/chota_blue"
-            app:tabTextColor="#333" />
+            app:tabSelectedTextColor="@color/green"
+            app:tabTextColor="#333"
+            android:background="@color/transparent"
+            />
 
         <ListView
+            android:layout_marginTop="-3dp"
             android:id="@+id/listView_school"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:listSelector="#FFEE58" />
+            android:listSelector="#FFEE58"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:background="@color/white"
+            />
 
     </LinearLayout>
 

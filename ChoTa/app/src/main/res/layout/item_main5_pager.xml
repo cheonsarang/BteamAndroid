@@ -27,7 +27,10 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="첫 구매 고객 최대 5,000원 할인쿠폰 증정"/>
+            android:text="첫 구매 고객 최대 5,000원 할인쿠폰 증정"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
 
         <ImageView
             android:layout_width="16dp"

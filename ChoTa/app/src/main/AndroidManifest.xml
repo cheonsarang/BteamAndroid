@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -15,13 +16,49 @@
         android:theme="@style/Theme.ChoTa"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".chat.ChatActivity"
+            android:exported="true" />
+        <activity
             android:name=".main.HomeActivity"
             android:exported="true" />
         <activity
             android:name=".school.SchoolActivity"
             android:exported="true" />
         <activity
+            android:name=".myInfo.Schedule_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".myInfo.EventActivity"
+            android:exported="true" />
+        <activity
+            android:name=".myInfo.WritingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".myInfo.BanActivity"
+            android:exported="true" />
+        <activity
+            android:name=".myInfo.InfoDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".WriteActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BellActivity"
+            android:exported="true" />
+        <activity
+            android:name=".JoinActivity"
+            android:exported="true" />
+        <activity
+            android:name=".IntroActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BoardActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginActivity"
             android:exported="true" />
         <activity
             android:name=".SplashActivity"
