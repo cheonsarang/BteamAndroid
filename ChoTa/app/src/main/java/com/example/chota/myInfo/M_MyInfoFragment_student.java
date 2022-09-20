@@ -11,13 +11,14 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.chota.LoginActivity;
 import com.example.chota.R;
 
 
 public class M_MyInfoFragment_student extends Fragment implements View.OnClickListener{
-    LinearLayout myinfo_info, scrap_info, write_info, event_info, revise_info, quit_info;
+    LinearLayout myinfo_info, scrap_info, write_info, event_info, revise_info, quit_info, logout_info;
     TextView student_name;
-
+    LoginActivity loginActivity;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class M_MyInfoFragment_student extends Fragment implements View.OnClickLi
         revise_info = v.findViewById(R.id.revise_info);
         quit_info = v.findViewById(R.id.quit_info);
         student_name = v.findViewById(R.id.student_name);
+        logout_info = v.findViewById(R.id.logout_info);
 
         myinfo_info.setOnClickListener(this);
         scrap_info.setOnClickListener(this);
@@ -37,6 +39,7 @@ public class M_MyInfoFragment_student extends Fragment implements View.OnClickLi
         event_info.setOnClickListener(this);
         revise_info.setOnClickListener(this);
         quit_info.setOnClickListener(this);
+        logout_info.setOnClickListener(this);
 
 
         return v;
@@ -52,6 +55,10 @@ public class M_MyInfoFragment_student extends Fragment implements View.OnClickLi
             intent = new Intent(getContext(), WritingActivity.class);
         }else if(v.getId() == R.id.event_info) {
             intent = new Intent(getContext(), EventActivity.class);
+        }else if(v.getId() == R.id.logout_info) {
+        CommonVal.loginInfo = null;
+        loginActivity.saveLoginInfo();
+        intent = new Intent(getContext(), LoginActivity.class);
         }
             startActivity(intent);
     }

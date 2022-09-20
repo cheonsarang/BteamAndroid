@@ -41,8 +41,7 @@ public class WriteActivity extends AppCompatActivity {
 
                 onBackPressed();
 
-                intent = new Intent(WriteActivity.this, BoardActivity.class);
-                startActivity(intent);
+
 
             }
         });

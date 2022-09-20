@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         toolbar_title =findViewById(R.id.toolbar_title);
         toolbar_title.setOnClickListener(this);
+        //네비게이션 드로어 activity_main2
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
@@ -87,8 +88,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }else if(item.getItemId() == R.id.tab5){
                     Log.d("탭", "onNavigationItemSelected: 탭5" );
                     toolbar_title.setText("마이페이지");
-                    getSupportFragmentManager().beginTransaction().replace(R.id.container , new M_MyInfoFragment_student()).commit();
-                    //student change
+                    if(CommonVal.loginInfo.getMember_grp().equals("S")) {
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container , new M_MyInfoFragment_student()).commit();
+                    }else if(CommonVal.loginInfo.getMember_grp().equals("T")) {
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container , new M_MyInfoFragment_teacher()).commit();
+                    }
+                    //getSupportFragmentManager().beginTransaction().replace(R.id.container , new M_MyInfoFragment_teacher()).commit();
+
                 }
                 return true;
             }

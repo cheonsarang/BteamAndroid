@@ -41,9 +41,6 @@ public class ClassFragment extends Fragment implements View.OnClickListener {
         View v = inflater.inflate(R.layout.fragment_class, container, false);
 
         tabs_class = v.findViewById(R.id.tabs_class);
-        listView_class1 = v.findViewById(R.id.listView_class1);
-        listView_class5 = v.findViewById(R.id.listView_class5);
-
         linear_class1 = v.findViewById(R.id.linear_class1);
         linear_class2 = v.findViewById(R.id.linear_class2);
         linear_class3 = v.findViewById(R.id.linear_class3);

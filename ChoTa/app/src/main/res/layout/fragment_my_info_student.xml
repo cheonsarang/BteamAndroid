@@ -48,27 +48,59 @@
                         android:text="학생"/>
                 </LinearLayout>
                 <LinearLayout
-                    android:id="@+id/myinfo_info"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background_childset_change"
                     android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="10dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
-                    android:paddingRight="10dp">
-                    <TextView
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_marginEnd="10dp"
+                        android:id="@+id/myinfo_info"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="내 정보 보기"
-                        android:textSize="15dp"
-                        android:textColor="#222"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:background="@drawable/background_childset_change"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="10dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/next_info"/>
+                        android:paddingRight="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="내 정보 보기"
+                            android:textSize="15dp"
+                            android:textColor="#222"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/next_info"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/logout_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_childset_change"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:layout_gravity="center"
+                        android:paddingRight="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="로그아웃"
+                            android:textSize="15dp"
+                            android:textColor="#222"/>
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/next_info"/>
+                    </LinearLayout>
+
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout

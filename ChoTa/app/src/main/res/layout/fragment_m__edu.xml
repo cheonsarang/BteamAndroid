@@ -20,39 +20,9 @@
             android:orientation="vertical">
 
             <FrameLayout
+                android:elevation="1dp"
                 android:layout_width="match_parent"
                 android:layout_height="250dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="130dp"
-                    android:layout_marginRight="20dp"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/btn1"
-                        android:layout_width="0dp"
-                        android:layout_height="110dp"
-                        android:layout_weight="1"
-                        android:background="#00ff0000" />
-
-                    <Button
-                        android:id="@+id/btn2"
-                        android:layout_width="0dp"
-                        android:layout_height="110dp"
-                        android:layout_weight="1"
-                        android:background="#00ff0000" />
-
-                    <Button
-                        android:id="@+id/btn3"
-                        android:layout_width="0dp"
-                        android:layout_height="110dp"
-                        android:layout_weight="1"
-                        android:background="#00ff0000" />
-
-                </LinearLayout>
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -76,17 +46,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/othic"
-                            android:text="금호"
+                            android:text="금호초등학교"
                             android:textColor="#FFFFFF"
                             android:textSize="20dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/othic"
-                            android:textSize="20dp"
-                            android:textColor="#FFFFFF"
-                            android:text="초등학교" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -127,6 +89,7 @@
                 </FrameLayout>
 
                 <LinearLayout
+                    android:elevation="3dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -268,8 +231,9 @@
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
+            <!--android:id="@+id/edu3_recv"-->
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/edu3_recv"
+                android:id="@+id/container_edu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

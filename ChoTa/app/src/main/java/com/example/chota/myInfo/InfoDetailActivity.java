@@ -2,9 +2,7 @@ package com.example.chota.myInfo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import com.example.chota.R;
@@ -13,13 +11,13 @@ import com.google.gson.Gson;
 
 public class InfoDetailActivity extends AppCompatActivity {
     MemberVO vo;
-    TextView member_id, userpw, name, school_name, phone_num, teacher_name, nickname;
+    TextView userid, userpw, name, school_name, phone_num, teacher_name, nickname;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_info);
 
-        member_id = findViewById(R.id.member_id);
+        userid = findViewById(R.id.userid);
         userpw = findViewById(R.id.userpw);
         name = findViewById(R.id.name);
         school_name = findViewById(R.id.school_name);
@@ -31,8 +29,7 @@ public class InfoDetailActivity extends AppCompatActivity {
     }
 
     public void setWidget(MemberVO vo) {
-        member_id.setText(vo.getMember_id());
-
+        userid.setText(vo.getUserid());
         userpw.setText(vo.getUserpw());
 
         name.setText(vo.getName());
@@ -42,7 +39,7 @@ public class InfoDetailActivity extends AppCompatActivity {
             nickname.setText("설정하지 않음");
         }
         school_name.setText(vo.getSchool_id());
-        phone_num.setText(vo.getPhone_num());
+        phone_num.setText(vo.getPhone());
 
     }
 }

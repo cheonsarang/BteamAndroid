@@ -22,6 +22,12 @@
             android:name=".chat.ChatActivity"
             android:exported="true" />
         <activity
+            android:name=".education.AcademyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".education.PlayActivity"
+            android:exported="true" />
+        <activity
             android:name=".main.HomeActivity"
             android:exported="true" />
         <activity

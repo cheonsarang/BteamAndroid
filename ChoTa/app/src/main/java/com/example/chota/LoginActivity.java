@@ -66,12 +66,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         //saveLoginInfo();
 
+        //saveLoginInfo();
         //자동로그인 공유자원)  //단점 : 사용자가 앱정보에서 스토리지&캐시를 맘대로 지울수 있는 부분이다
         SharedPreferences preferences = getPreferences(MODE_PRIVATE); //해당하는 액티비티에서만 쓰는것 private
         String userid = preferences.getString("id", "--");  //공유자원에 데이터를 저장을 해놨을때 읽는 방법 (지금은 디폴트값 들어옴)
         String userpw = preferences.getString("pw", "--");  //공유자원에 데이터를 저장을 해놨을때 읽는 방법 (지금은 디폴트값 들어옴)
         Log.d("공유자원", "onCreate: " + userid + " : " + userpw);
 
+        //자동 로그인기능
+        if(!userid.equals("--") && !userpw.equals("--")) {
+            chk_login.setChecked(true);
+            edt_id.setText(userid);
+            edt_pw.setText(userpw);
+            login();    //<- 만들어진 기능은 로직에 따라서 다시 사용이 가능하게 한다.
+        }
 
     }
 
@@ -117,6 +125,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             startActivity(intent);
 
         }
+
+
+
 
         //NaverIdLoginSDK.initialize(context, {OAUTH_CLIENT_ID}, {OAUTH_CLIENT_SECRET}, {OAUTH_CLIENT_NAME})
         //코틀린은 객체를 인스턴스화 안해도 자동으로 안에 있는 인스턴스 멤버를 접근해서 쓸수가 잇음
@@ -255,9 +266,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //    }
 
     // 메소드안에 바뀌어야될부분이 고정되어있으면 재활용이 힘든 메소드.
-
     // => editText로 고정되어있던부분을 파라메터로 빼주기만하면 재활용이 가능한구조가됨   소셜로그인은 아이디가 이메일형식으로 저장
-
 //    public void login(String email, String pw, String social_yn){
 //        CommonConn conn = new CommonConn("andlogin", LoginActivity.this);
 //        conn.addParams("email", email);
@@ -329,6 +338,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }else {
                         //자동로그인은 유저가 선택하기 때문에 자동로그인이 체크가 되었는지를 판단하고 체크가 되었을때만! 저장이 되어야함.
                         if(chk_login.isChecked()){
+                            Log.d("정보", "onResult: " + CommonVal.loginInfo.getUserid());
+                            Log.d("정보", "onResult: " + CommonVal.loginInfo.getUserpw());
+                            Log.d("정보", "onResult: " + CommonVal.loginInfo.getSchool_name());
                             saveLoginInfo();
                         }
 
@@ -347,8 +359,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void saveLoginInfo(){//공유자원 메소드
         SharedPreferences preferences = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();//edit() <- Editor객체를 리턴하는 메소드
-        editor.putString("id", CommonVal.loginInfo.getMember_id());  //아이디 자동 저장
-        editor.putString("pw", CommonVal.loginInfo.getMember_pw());  //비밀번호 자동 저장
+        editor.putString("id", CommonVal.loginInfo.getUserid());  //아이디 자동 저장
+        editor.putString("pw", CommonVal.loginInfo.getUserpw());  //비밀번호 자동 저장
 
         editor.apply(); //확정지어줘야함
 
