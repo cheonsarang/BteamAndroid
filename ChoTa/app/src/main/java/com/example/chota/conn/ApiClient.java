@@ -10,7 +10,8 @@ public class ApiClient {
     // url정보 ( middle웨어 tomcat까지의 정보를 저장해둠 )
     // 여기 클래스까지만 접근하면 바로 사용할수있는 Retrofit 객체를 준비해두기.
 
-    private static final String BASE_URL = "http://192.168.0.62/bteam/";
+    private static final String BASE_URL = "http://192.168.0.58/bteam/";
+    //private static final String BASE_URL = "http://192.168.0.62/bteam/";
     //private static final String BASE_URL = "http://192.168.0.63:81/bteam/";
 
 
