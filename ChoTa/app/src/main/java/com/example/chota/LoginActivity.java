@@ -26,6 +26,8 @@ import com.example.chota.myInfo.MemberVO;
 import com.google.gson.Gson;
 import com.navercorp.nid.oauth.view.NidOAuthLoginButton;
 
+import retrofit2.http.HEAD;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
     NidOAuthLoginButton btn_naver;
     EditText edt_id, edt_pw;
@@ -58,7 +60,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
 
-        chk_login = findViewById(R.id.chk_login);
 
         tv_find_id.setOnClickListener(this);
         tv_find_pw.setOnClickListener(this);
@@ -337,12 +338,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }else {
                         //자동로그인은 유저가 선택하기 때문에 자동로그인이 체크가 되었는지를 판단하고 체크가 되었을때만! 저장이 되어야함.
                         if(chk_login.isChecked()){
-<<<<<<< HEAD
+
                             Log.d("정보", "onResult: " + CommonVal.loginInfo.getUserid());
                             Log.d("정보", "onResult: " + CommonVal.loginInfo.getUserpw());
                             Log.d("정보", "onResult: " + CommonVal.loginInfo.getSchool_name());
-=======
->>>>>>> 70302d5284473031944cc1e4a821608592d3514e
+
                             saveLoginInfo();
                         }
 
