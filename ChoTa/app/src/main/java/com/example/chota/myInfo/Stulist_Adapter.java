@@ -55,10 +55,10 @@ public class Stulist_Adapter extends RecyclerView.Adapter<Stulist_Adapter.ViewHo
             phone_num = v.findViewById(R.id.phone_num);
         }
         public void bind(@NonNull ViewHolder holder, int i){
-            profile_info.setImageResource(list.get(i).getImg_id());
+            //profile_info.setImageResource(list.get(i).getProfile().);
             stu_name_info.setText(list.get(i).getName());
             nickname.setText(list.get(i).getNickname());    //닉네임 없는 경우 처리하기
-            ban.setText(list.get(i).getBan());
+            ban.setText(list.get(i).getGrade_class_code());
             parent_phone.setText(list.get(i).getParent_phone());
         }
     }

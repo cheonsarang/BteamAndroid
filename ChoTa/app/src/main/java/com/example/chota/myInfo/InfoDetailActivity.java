@@ -31,7 +31,7 @@ public class InfoDetailActivity extends AppCompatActivity {
     }
 
     public void setWidget(MemberVO vo) {
-        member_id.setText(vo.getMember_id());
+        member_id.setText(vo.getUserid());
         userpw.setText(vo.getUserpw());
         name.setText(vo.getName());
         if(vo.getNickname() != null) {
@@ -40,7 +40,7 @@ public class InfoDetailActivity extends AppCompatActivity {
             nickname.setText("설정하지 않음");
         }
         school_name.setText(vo.getSchool_id());
-        phone_num.setText(vo.getPhone_num());
+        phone_num.setText(vo.getPhone());
 
     }
 }

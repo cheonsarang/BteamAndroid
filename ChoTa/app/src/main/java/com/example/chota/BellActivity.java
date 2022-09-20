@@ -18,7 +18,7 @@ public class BellActivity extends AppCompatActivity {
         findViewById(R.id.img_back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                onBackPressed();
             }
         });
 

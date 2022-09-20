@@ -59,6 +59,14 @@ public class Join1Fragment extends Fragment {
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
+
+
+
+
+                //원래코드
                 if(edt_id.getText().toString().equals("") || edt_pw.getText().toString().equals("")
                         || edt_pw_chk.getText().toString().equals("") || !btn_id_chk.callOnClick() || !tvPwChk(edt_pw_chk)){
                     if(!btn_id_chk.callOnClick()){

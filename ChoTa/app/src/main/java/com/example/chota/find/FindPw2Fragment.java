@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.format.Time;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.chota.R;
+
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Timer;
 
 
 public class FindPw2Fragment extends Fragment {
@@ -37,7 +42,17 @@ public class FindPw2Fragment extends Fragment {
         btn_next = v.findViewById(R.id.btn_next);
         frame = v.findViewById(R.id.frame);
 
-        btn_next.setOnClickListener(new View.OnClickListener() {
+
+        Time time = new Time();
+        int minute = time.minute;
+        Date today = new Date();
+        today.toString();
+        tv_time.setText(minute+"");
+
+
+
+        //확인버튼
+       btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
