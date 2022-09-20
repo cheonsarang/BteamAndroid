@@ -24,8 +24,7 @@ import com.google.gson.Gson;
 
 
 public class M_EduFragment extends Fragment implements View.OnClickListener{
-
-    Button edu1_locate, btn1, btn2, btn3;
+    Button edu1_locate;
     TextView school_name_edu, num_edu;
     CardView edu2_find1, edu2_find2, edu2_find3;
     LinearLayout edu4_school, edu_linear1;
@@ -45,9 +44,7 @@ public class M_EduFragment extends Fragment implements View.OnClickListener{
 
         edu_linear1 = v.findViewById(R.id.edu_linear1);
 
-        btn1 = v.findViewById(R.id.btn1);
-        btn2 = v.findViewById(R.id.btn2);
-        btn3 = v.findViewById(R.id.btn3);
+
 
         edu1_locate.setOnClickListener(this);
         edu2_find1.setOnClickListener(this);
@@ -60,9 +57,7 @@ public class M_EduFragment extends Fragment implements View.OnClickListener{
 
         edu_linear1.setOnClickListener(this);
 
-        btn1.setOnClickListener(this);
-        btn2.setOnClickListener(this);
-        btn3.setOnClickListener(this);
+
         return v;
     }
 

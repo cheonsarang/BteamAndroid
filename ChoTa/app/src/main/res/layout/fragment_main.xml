@@ -20,7 +20,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <!--메인2 이벤트 연결 등-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,7 +64,6 @@
 
             </LinearLayout>
 
-            <!--메인3 주요서비스-->
             <GridView
                 android:layout_marginTop="20dp"
                 android:id="@+id/gridview"
@@ -76,7 +74,6 @@
                 android:paddingRight="10dp"
                 />
 
-            <!--메인4 스크랩, 내글보기-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -144,7 +141,6 @@
 
             </LinearLayout>
 
-            <!--메인5 공지사항 오토슬라이드-->
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/main5_pager2"
                 android:layout_marginLeft="20dp"
@@ -159,8 +155,6 @@
                 android:gravity="center"
                 />
 
-            <!--메인6 소셜스타-->
-            <!--사랑님하신거 가지고 오기-->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"

@@ -15,7 +15,6 @@
     <uses-feature android:name="android.hardware.camera2"
         android:required="true"/>
 
-    <!--API30이상에서는 queries사용해서 권한부여를 한번 더 해야함.-->
     <queries>
         <!-- WebView -->
         <intent>

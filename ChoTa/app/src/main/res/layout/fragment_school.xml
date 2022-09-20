@@ -17,12 +17,11 @@
             android:id="@+id/tabs_school"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/transparent"
             app:tabGravity="fill"
             app:tabMode="fixed"
             app:tabSelectedTextColor="@color/green"
-            app:tabTextColor="#333"
-            android:background="@color/transparent"
-            />
+            app:tabTextColor="#333" />
 
         <ListView
             android:layout_marginTop="-3dp"

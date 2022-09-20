@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.example.chota.board.M_Board1Fragment;
 
+import com.example.chota.common.CommonVal;
 import com.example.chota.main.HomeActivity;
 
 import com.example.chota.main.M_EduFragment;

@@ -231,7 +231,6 @@
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
-            <!--android:id="@+id/edu3_recv"-->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/container_edu"
                 android:layout_width="match_parent"

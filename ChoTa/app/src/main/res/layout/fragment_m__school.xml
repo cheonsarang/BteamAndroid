@@ -20,7 +20,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <!-- 우리학교 클릭 했을 떄 -->
                 <LinearLayout
                     android:id="@+id/main_school1"
                     android:layout_width="match_parent"
@@ -95,7 +94,6 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <!-- 우리학교 메인 -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -280,7 +278,6 @@
 
                         </LinearLayout>
 
-                        <!-- 우리학교 검색 -->
                         <LinearLayout
                             android:id="@+id/school2_serach"
                             android:layout_width="match_parent"
@@ -308,7 +305,6 @@
 
                         </LinearLayout>
 
-                        <!-- 우리학교 챕터 나눔1 -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -316,7 +312,6 @@
                             android:layout_margin="20dp"
                             >
 
-                            <!-- 챕터 - 가정통신문 -->
                             <LinearLayout
                                 android:id="@+id/school3_1"
                                 android:layout_weight="1"
@@ -364,7 +359,6 @@
 
                             </LinearLayout>
 
-                            <!-- 챕터 - 급식 -->
                             <LinearLayout
                                 android:id="@+id/school3_2"
                                 android:layout_weight="1"
@@ -410,7 +404,6 @@
 
                         </LinearLayout>
 
-                        <!-- 우리학교 챕터 나눔2 -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -420,7 +413,6 @@
                             android:layout_marginBottom="20dp"
                             >
 
-                            <!-- 챕터 - 학교게시판 -->
                             <LinearLayout
                                 android:id="@+id/school3_3"
                                 android:layout_weight="1"
@@ -468,7 +460,6 @@
 
                             </LinearLayout>
 
-                            <!-- 챕터 - 공지사항 -->
                             <LinearLayout
                                 android:id="@+id/school3_4"
                                 android:layout_weight="1"
@@ -524,7 +515,6 @@
 
 
 
-                <!-- 우리반 클릭 했을 떄 -->
                 <LinearLayout
                     android:id="@+id/main_school2"
                     android:layout_width="match_parent"
@@ -601,7 +591,6 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <!-- 우리반 메인 -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -807,7 +796,6 @@
 
                         </LinearLayout>
 
-                        <!-- 우리반 검색 -->
                         <LinearLayout
                             android:id="@+id/class2_serach"
                             android:layout_width="match_parent"
@@ -835,7 +823,6 @@
 
                         </LinearLayout>
 
-                        <!-- 우리학교 시간표 간이 표시 -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -903,7 +890,6 @@
 
                         </LinearLayout>
 
-                        <!-- 우리학교 챕터 나눔2 -->
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -913,7 +899,6 @@
                             android:layout_marginBottom="20dp"
                             >
 
-                            <!-- 챕터 - 학교게시판 -->
                             <LinearLayout
                                 android:id="@+id/class3_2"
                                 android:layout_weight="1"

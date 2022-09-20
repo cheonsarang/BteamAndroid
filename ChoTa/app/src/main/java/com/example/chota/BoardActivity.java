@@ -23,7 +23,7 @@ public class BoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_board);
 
-D
+
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new M_Board1Fragment()).commit();
 
         board1Fragment = new M_Board1Fragment();
