@@ -23,7 +23,6 @@
     <string name="title_activity_navi_draw">NaviDrawActivity</string>
     <string name="title_activity_navidraw">NavidrawActivity</string>
 
-    <!--  이메일 스피너 선택  -->
     <string-array name="planets_array">
         <item>선택</item>
         <item>naver.com</item>

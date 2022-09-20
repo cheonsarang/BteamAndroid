@@ -12,7 +12,6 @@ import android.view.MenuItem;
 import com.example.chota.R;
 import com.google.android.material.tabs.TabLayout;
 
-import org.checkerframework.checker.units.qual.C;
 
 public class SchoolActivity extends AppCompatActivity {
 

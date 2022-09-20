@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 
 import com.example.chota.LoginActivity;
 import com.example.chota.R;
+import com.example.chota.common.CommonVal;
 
 
 public class M_MyInfoFragment_teacher extends Fragment implements View.OnClickListener{

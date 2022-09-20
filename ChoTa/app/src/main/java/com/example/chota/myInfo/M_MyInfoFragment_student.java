@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.chota.LoginActivity;
 import com.example.chota.R;
+import com.example.chota.common.CommonVal;
 
 
 public class M_MyInfoFragment_student extends Fragment implements View.OnClickListener{

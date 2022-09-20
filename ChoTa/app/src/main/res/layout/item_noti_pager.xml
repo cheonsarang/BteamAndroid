@@ -5,10 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
-    <!--ViewPager에 아이템으로 (layout)사용되는 자식 요소의 최상위 레이아웃은
-    부모크기만큼 늘어나있어야함.
-    (ViewPager의 크기를 조절해야함) item크기 조절 x : wrap_content x, dp x
-    -->
+
 
     <TextView
         android:id="@+id/tv_title1"
