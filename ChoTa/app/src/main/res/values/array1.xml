@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="board_category">
+        <item>""</item>
+        <item>자유게시판</item>
+        <item>공부게시판</item>
+        <item>관심게시판</item>
+        <item>고민상담게시판</item>
+        <item>우리학교게시판</item>
+        <item>우리반게시판</item>
+
+    </string-array>
+
+</resources>
