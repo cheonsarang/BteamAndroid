@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".join.Join1Fragment"
+    android:orientation="vertical"
+    android:layout_margin="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/notosanskr_bold"
+        android:text="회원가입"
+        android:textSize="25dp" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/chota_black"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:cardCornerRadius="5dp"
+        android:elevation="1dp"
+        android:backgroundTint="@color/grey_light"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/user_id"
+                />
+            <EditText
+                android:id="@+id/edt_id"
+                android:layout_weight="2.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="아이디를 입력하세요"
+                android:textSize="15dp"
+                android:background="@color/grey_light"
+                />
+
+            <Button
+                android:id="@+id/btn_id_chk"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:text="중복확인"
+                android:layout_margin="-10dp"
+                android:backgroundTint="#03A9F4"/>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_id_chk_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="아이디확인"
+        android:textColor="@color/teal_700"
+        android:layout_marginLeft="35dp"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/chota_black"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:cardCornerRadius="5dp"
+        android:elevation="1dp"
+        android:backgroundTint="@color/grey_light"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/user_password"
+                />
+            <EditText
+                android:id="@+id/edt_pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="비밀번호를 입력하세요"
+                android:textSize="15dp"
+                android:outlineProvider="none"
+                android:inputType="textPassword"
+                android:background="@color/grey_light"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 확인"
+        android:textSize="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/chota_black"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:cardCornerRadius="5dp"
+        android:elevation="1dp"
+        android:backgroundTint="@color/grey_light"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/user_password"
+                />
+            <EditText
+                android:id="@+id/edt_pw_chk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="같은 비밀번호를 입력하세요"
+                android:textSize="15dp"
+
+                android:inputType="textPassword"
+                android:background="@color/grey_light"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/tv_pw_chk_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="비밀번호확인"
+        android:textColor="@color/teal_700"
+        android:layout_marginLeft="35dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OR"
+        android:textSize="20dp"
+        android:layout_margin="10dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="소셜계정으로 가입하세요"
+        android:textSize="15dp"
+        android:layout_margin="10dp"
+        android:gravity="center"/>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp">
+
+        <ImageButton
+            android:id="@+id/imgb_kakao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:padding="-5dp"
+            android:src="@drawable/kakao" />
+
+        <ImageButton
+            android:id="@+id/imgb_naver"
+            android:layout_width="183dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/imgb_kakao"
+            android:backgroundTint="@color/white"
+            android:padding="-5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/naver" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="다음"
+        android:backgroundTint="@color/chota_blue"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/notosanskr_medium"
+        />
+
+    <Button
+        android:id="@+id/btn_prev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="뒤로가기"
+        android:backgroundTint="@color/chota_blue"
+        android:textColor="@color/white"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/notosanskr_medium"
+        />
+
+
+</LinearLayout>

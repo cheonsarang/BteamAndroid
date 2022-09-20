@@ -31,7 +31,7 @@ public class Edu_Adapter extends RecyclerView.Adapter<Edu_Adapter.classHolder>{
     }
 
     public class classHolder extends RecyclerView.ViewHolder {
-        TextView title, board_name, writer, writedate, board_content, read_heart, comment_cnt;
+        TextView title, board_name, writer, writedate, board_content, read_heart, comment_cnt, school_name_edu;
         public classHolder(@NonNull View v) {
             super(v);
             title = v.findViewById(R.id.title);
@@ -41,6 +41,7 @@ public class Edu_Adapter extends RecyclerView.Adapter<Edu_Adapter.classHolder>{
             board_content = v.findViewById(R.id.board_content);
             read_heart = v.findViewById(R.id.read_heart);
             comment_cnt = v.findViewById(R.id.comment_cnt);
+            school_name_edu = v.findViewById(R.id.school_name_edu);
 
 
 
