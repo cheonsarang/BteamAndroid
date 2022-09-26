@@ -52,8 +52,11 @@ public class M_Board1Fragment extends Fragment {
         card_rank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               startActivity(intent);
+                Intent intent = new Intent(getContext(), Board3Activity.class);
+                startActivity(intent);
+            }
 
+        });
 
 
 
