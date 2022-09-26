@@ -1,0 +1,111 @@
+{
+  "project_info": {
+<<<<<<< HEAD
+    "project_number": "88658011339",
+    "firebase_url": "https://chatapp-57272-default-rtdb.firebaseio.com",
+    "project_id": "chatapp-57272",
+    "storage_bucket": "chatapp-57272.appspot.com"
+=======
+    "project_number": "708358261076",
+    "project_id": "chota-21067",
+    "storage_bucket": "chota-21067.appspot.com"
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
+  },
+  "client": [
+    {
+      "client_info": {
+<<<<<<< HEAD
+        "mobilesdk_app_id": "1:88658011339:android:58a4d049e3f23f616ee74e",
+        "android_client_info": {
+          "package_name": "com.example.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88658011339-f4o1f8h4m758nug24hn0t166harlo7a0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chatapp",
+            "certificate_hash": "6cf49a746e0da61de7e53c13fb86cd3b5070c8e2"
+          }
+        },
+        {
+          "client_id": "88658011339-56qop1q5h8pjo1me74l0un3fdeihva4l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6fsrF2oKI1cssW4Pv9pSybw1xm8fTRBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88658011339-56qop1q5h8pjo1me74l0un3fdeihva4l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88658011339:android:f25212c710a61edc6ee74e",
+=======
+        "mobilesdk_app_id": "1:708358261076:android:9a279f51d615eb859be0c1",
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
+        "android_client_info": {
+          "package_name": "com.example.chota"
+        }
+      },
+      "oauth_client": [
+        {
+<<<<<<< HEAD
+          "client_id": "88658011339-6jht9nktqdoab5hoef8e26mbvafge8ll.apps.googleusercontent.com",
+=======
+          "client_id": "708358261076-to0f93c3f3jpvkqnfocrkgnfbcvh7ft0.apps.googleusercontent.com",
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chota",
+            "certificate_hash": "6cf49a746e0da61de7e53c13fb86cd3b5070c8e2"
+          }
+        },
+        {
+<<<<<<< HEAD
+          "client_id": "88658011339-56qop1q5h8pjo1me74l0un3fdeihva4l.apps.googleusercontent.com",
+=======
+          "client_id": "708358261076-gtlf8hpbokhtbk5erc4dnkp6v2j0vj7m.apps.googleusercontent.com",
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+<<<<<<< HEAD
+          "current_key": "AIzaSyA6fsrF2oKI1cssW4Pv9pSybw1xm8fTRBQ"
+=======
+          "current_key": "AIzaSyCYwau1N8UZrdZMaMZqjA8Dr2zMAv_jhZc"
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+<<<<<<< HEAD
+              "client_id": "88658011339-56qop1q5h8pjo1me74l0un3fdeihva4l.apps.googleusercontent.com",
+=======
+              "client_id": "708358261076-gtlf8hpbokhtbk5erc4dnkp6v2j0vj7m.apps.googleusercontent.com",
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

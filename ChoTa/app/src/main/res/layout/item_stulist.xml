@@ -35,7 +35,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -48,62 +48,56 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="2.5"
                         android:text="학생이름"/>
-
                     <TextView
                         android:gravity="center"
-                        android:textColor="#222"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.3"
-                        android:text="("/>
-
-                    <TextView
-                        android:gravity="center"
+                        android:textSize="12dp"
                         android:id="@+id/nickname"
-                        android:textColor="#222"
+                        android:textColor="@color/green"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
                         android:text="닉네임"/>
-                    <TextView
-                        android:gravity="center"
-                        android:textColor="#222"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.3"
-                        android:text=")"/>
-                    <TextView
-                        android:id="@+id/ban"
-                        android:gravity="center"
-                        android:textColor="#222"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="3"/>
-                    <TextView
-                        android:gravity="center"
-                        android:textColor="#222"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="반"/>
-                    <TextView
-                        android:id="@+id/phone_num"
-                        android:gravity="center"
-                        android:textColor="#222"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="5"
-                        android:text="핸드폰번호"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:orientation="horizontal">
                     <TextView
                         android:gravity="center"
-                        android:id="@+id/parent_name"
+                        android:textColor="#222"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="학생 번호"/>
+
+                    <TextView
+                        android:gravity="center"
+                        android:textColor="#222"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:text=":"/>
+
+                    <TextView
+                        android:gravity="center"
+                        android:id="@+id/phone_num"
+                        android:textColor="#222"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="학생 번호 또로록"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:gravity="center"
                         android:textColor="#222"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
@@ -127,7 +121,6 @@
                         android:layout_weight="3"
                         android:text="보호자 번호 또로록"/>
                 </LinearLayout>
-
             </LinearLayout>
         </LinearLayout>
 

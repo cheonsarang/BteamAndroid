@@ -1,5 +1,6 @@
 package com.example.chota.myInfo.decorator;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 
@@ -12,12 +13,12 @@ import java.util.Collection;
 import java.util.HashSet;
 
 public class EventDecorator implements DayViewDecorator {
-    //private final Drawable drawable;
+    private final Drawable drawable;
     private int color;
     private HashSet<CalendarDay> dates;
 
-    public EventDecorator(int color, Collection<CalendarDay> dates, Context context) {
-        //drawable = context.getResources().getDrawable(R.drawable.ic_baseline_arrow_drop_up_24);
+    public EventDecorator(int color, Collection<CalendarDay> dates, Activity context) {
+        drawable = context.getResources().getDrawable(R.drawable.ic_baseline_arrow_drop_up_24);
         this.color = color;
         this.dates = new HashSet<>(dates);
     }

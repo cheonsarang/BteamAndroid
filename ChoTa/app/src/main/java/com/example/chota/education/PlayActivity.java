@@ -35,6 +35,7 @@ public class PlayActivity extends AppCompatActivity {
         back = findViewById(R.id.back);
 
         recv_play();
+
         searchBar.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

@@ -306,7 +306,10 @@
                                 android:layout_width="14dp"
                                 android:layout_height="14dp"
                                 android:layout_marginRight="10dp"
+<<<<<<< HEAD
                                 android:layout_gravity="center_vertical"
+=======
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
                                 android:src="@drawable/ic_baseline_search_24" />
 
                         </LinearLayout>
@@ -326,15 +329,27 @@
                                 android:layout_marginRight="4dp"
                                 android:layout_weight="1"
                                 android:background="@drawable/background_m_school_basic"
+<<<<<<< HEAD
                                 android:orientation="vertical"
                                 android:padding="20dp">
+=======
+                                android:layout_marginRight="4dp"
+                                android:orientation="vertical"
+                                android:padding="20dp"
+                                >
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="14dp"
                                     android:gravity="center"
+<<<<<<< HEAD
                                     android:orientation="horizontal">
+=======
+                                    android:layout_marginBottom="10dp"
+                                    >
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
 
                                     <ImageView
                                         android:layout_width="20dp"
@@ -355,11 +370,18 @@
                                     android:id="@+id/school3_1_listview"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                                     android:background="@color/white"
                                     android:divider="@null"
                                     android:dividerHeight="0dp"
                                     android:listSelector="#FFEE58"
                                     android:maxLines="5"
+=======
+                                    android:listSelector="#FFEE58"
+                                    android:divider="@null"
+                                    android:dividerHeight="0dp"
+                                    android:background="@color/white"
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
                                     />
 
                             </LinearLayout>
@@ -372,15 +394,27 @@
                                 android:layout_marginLeft="4dp"
                                 android:layout_weight="1"
                                 android:background="@drawable/background_m_school_basic"
+<<<<<<< HEAD
                                 android:orientation="vertical"
                                 android:padding="20dp">
+=======
+                                android:layout_marginLeft="4dp"
+                                android:orientation="vertical"
+                                android:padding="20dp"
+                                >
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="14dp"
                                     android:gravity="center"
+<<<<<<< HEAD
                                     android:orientation="horizontal">
+=======
+                                    android:layout_marginBottom="10dp"
+                                    >
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
 
                                     <ImageView
                                         android:layout_width="20dp"
@@ -401,11 +435,15 @@
                                     android:id="@+id/school3_2_meal"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                                     android:text="급식 없는 날"
                                     android:textColor="#333"
                                     android:maxLines="6"
                                     android:ellipsize="end"
                                     />
+=======
+                                    android:text="example"/>
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
 
                             </LinearLayout>
 
@@ -428,15 +466,27 @@
                                 android:layout_marginRight="4dp"
                                 android:layout_weight="1"
                                 android:background="@drawable/background_m_school_basic"
+<<<<<<< HEAD
                                 android:orientation="vertical"
                                 android:padding="20dp">
+=======
+                                android:layout_marginRight="4dp"
+                                android:orientation="vertical"
+                                android:padding="20dp"
+                                >
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="14dp"
                                     android:gravity="center"
+<<<<<<< HEAD
                                     android:orientation="horizontal">
+=======
+                                    android:layout_marginBottom="10dp"
+                                    >
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
 
                                     <ImageView
                                         android:layout_width="20dp"
@@ -457,11 +507,18 @@
                                     android:id="@+id/school3_3_listview"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                                     android:background="@color/white"
                                     android:divider="@null"
                                     android:dividerHeight="0dp"
                                     android:listSelector="#FFEE58"
                                     android:maxLines="5"
+=======
+                                    android:listSelector="#FFEE58"
+                                    android:divider="@null"
+                                    android:dividerHeight="0dp"
+                                    android:background="@color/white"
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
                                     />
 
                             </LinearLayout>
@@ -474,15 +531,27 @@
                                 android:layout_marginLeft="4dp"
                                 android:layout_weight="1"
                                 android:background="@drawable/background_m_school_basic"
+<<<<<<< HEAD
                                 android:orientation="vertical"
                                 android:padding="20dp">
+=======
+                                android:layout_marginLeft="4dp"
+                                android:orientation="vertical"
+                                android:padding="20dp"
+                                >
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginBottom="14dp"
                                     android:gravity="center"
+<<<<<<< HEAD
                                     android:orientation="horizontal">
+=======
+                                    android:layout_marginBottom="10dp"
+                                    >
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
 
                                     <ImageView
                                         android:layout_width="20dp"
@@ -503,11 +572,18 @@
                                     android:id="@+id/school3_4_listview"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+<<<<<<< HEAD
                                     android:background="@color/white"
                                     android:divider="@null"
                                     android:dividerHeight="0dp"
                                     android:listSelector="#FFEE58"
                                     android:maxLines="5"
+=======
+                                    android:listSelector="#FFEE58"
+                                    android:divider="@null"
+                                    android:dividerHeight="0dp"
+                                    android:background="@color/white"
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
                                     />
 
                             </LinearLayout>
@@ -565,13 +641,20 @@
 
                         <LinearLayout
                             android:id="@+id/all2"
+<<<<<<< HEAD
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+=======
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
                             android:gravity="end"
                             android:orientation="horizontal">
 
                             <TextView
+                                android:layout_gravity="center_vertical"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_vertical"
@@ -580,6 +663,7 @@
                                 android:textColor="#999" />
 
                             <ImageView
+                                android:layout_gravity="center_vertical"
                                 android:layout_width="14dp"
                                 android:layout_height="14dp"
                                 android:layout_gravity="center_vertical"
@@ -829,7 +913,10 @@
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
                                 android:layout_marginRight="10dp"
+<<<<<<< HEAD
                                 android:layout_gravity="center_vertical"
+=======
+>>>>>>> 8420268a6c97c263f54b530fb8093f9d77da044d
                                 android:src="@drawable/ic_baseline_search_24" />
 
                         </LinearLayout>

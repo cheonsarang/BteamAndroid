@@ -6,6 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 import androidx.fragment.app.Fragment;
 
@@ -15,7 +18,8 @@ import com.example.chota.common.CommonVal;
 
 
 public class M_MyInfoFragment_teacher extends Fragment implements View.OnClickListener{
-    LinearLayout myinfo_info, scrap_info, student_info, schedule_info, homework_info, timetable_info, freeboard_info, revise_info, quit_info, logout_info;
+    LinearLayout myinfo_info, scrap_info, student_info, schedule_info, homework_info, timetable_info, freeboard_info, quit_info, logout_info;
+    TextView teacher_name;
     MemberVO vo = CommonVal.loginInfo;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,6 +31,7 @@ public class M_MyInfoFragment_teacher extends Fragment implements View.OnClickLi
         student_info = v.findViewById(R.id.student_info);
         schedule_info = v.findViewById(R.id.schedule_info);
         logout_info = v.findViewById(R.id.logout_info);
+        teacher_name = v.findViewById(R.id.teacher_name);
 
         myinfo_info.setOnClickListener(this);
         scrap_info.setOnClickListener(this);
@@ -34,6 +39,7 @@ public class M_MyInfoFragment_teacher extends Fragment implements View.OnClickLi
         schedule_info.setOnClickListener(this);
         logout_info.setOnClickListener(this);
 
+        teacher_name.setText(CommonVal.loginInfo.getName());
 
 
 
@@ -48,7 +54,8 @@ public class M_MyInfoFragment_teacher extends Fragment implements View.OnClickLi
         Intent intent = new Intent();
         if(v.getId() == R.id.myinfo_info) {
             intent = new Intent(getContext(), InfoDetailActivity.class);
-            //intent.putExtra("id", CommonVal.loginInfo.getMember_id());
+            intent.putExtra("id", CommonVal.loginInfo.getUserid());
+            intent.putExtra("group", CommonVal.loginInfo.getMember_grp());
         }else if(v.getId() == R.id.scrap_info) {
             intent = new Intent(getContext(), WritingActivity.class);
         }else if(v.getId() == R.id.student_info) {
@@ -57,8 +64,8 @@ public class M_MyInfoFragment_teacher extends Fragment implements View.OnClickLi
 
         }else if(v.getId() == R.id.schedule_info){
             intent = new Intent(getContext(), Schedule_Activity.class);
-            //intent.putExtra("name", CommonVal.loginInfo.getName());
-            //intent.putExtra("member_id", CommonVal.loginInfo.getMember_id());
+            intent.putExtra("school_id", CommonVal.loginInfo.getSchool_id());
+            intent.putExtra("grade_class_code", CommonVal.loginInfo.getGrade_class_code());
         }else if(v.getId() == R.id.logout_info) {
             CommonVal.loginInfo = null;
             intent = new Intent(getContext(), LoginActivity.class);
