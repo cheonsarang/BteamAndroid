@@ -25,7 +25,7 @@ public class TimeTablePeriodAdapter extends RecyclerView.Adapter<TimeTablePeriod
     @NonNull
     @Override
     public ViewHoler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new TimeTablePeriodAdapter.ViewHoler(inflater.inflate(R.layout.item_timtable_period_recv, parent, false));
+        return new ViewHoler(inflater.inflate(R.layout.item_timtable_period_recv, parent, false));
     }
 
     @Override
@@ -61,7 +61,7 @@ public class TimeTablePeriodAdapter extends RecyclerView.Adapter<TimeTablePeriod
 
         }
 
-        public void bind(TimeTablePeriodAdapter.ViewHoler holder, int position) {
+        public void bind(ViewHoler holder, int position) {
             holder.day.setText(list.get(position).getDay());
             holder.period1.setText(list.get(position).getPeriod1());
             holder.period2.setText(list.get(position).getPeriod2());

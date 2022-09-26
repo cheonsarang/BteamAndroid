@@ -19,13 +19,10 @@ import android.widget.TextView;
 import com.example.chota.board.M_Board1Fragment;
 import com.example.chota.common.CommonVal;
 import com.example.chota.education.M_EduFragment;
-import com.example.chota.school.M_SchoolFragment;
-import com.example.chota.main.MainFragment;
 import com.example.chota.myInfo.M_MyInfoFragment_student;
 import com.example.chota.myInfo.M_MyInfoFragment_teacher;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-import com.navercorp.nid.NaverIdLoginSDK;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     BottomNavigationView btm_nav;

@@ -1,17 +1,15 @@
 package com.example.chota.school;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import androidx.fragment.app.Fragment;
+
 import com.example.chota.R;
-import com.example.chota.common.Common;
 import com.example.chota.common.CommonVal;
 import com.example.chota.conn.CommonConn;
 import com.google.android.material.tabs.TabLayout;

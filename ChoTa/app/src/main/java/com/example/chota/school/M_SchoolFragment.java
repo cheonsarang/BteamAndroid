@@ -2,39 +2,21 @@ package com.example.chota.school;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+
 import com.example.chota.R;
-import com.example.chota.chat.ChatMainActivity;
-import com.example.chota.chat.SpecificChatActivity;
-import com.example.chota.chat.chatActivity;
-import com.example.chota.common.Common;
 import com.example.chota.common.CommonVal;
 import com.example.chota.conn.CommonConn;
-import com.example.chota.myInfo.MemberVO;
-import com.example.chota.school.School3Adapter;
-import com.example.chota.school.SchoolActivity;
-import com.example.chota.school.SchoolFragment;
-import com.example.chota.school.SchoolMealsAdapter;
-import com.example.chota.school.SchoolMealsVO;
-import com.example.chota.school.SchoolpostAdapter;
-import com.example.chota.school.SchoolpostVO;
-import com.example.chota.school.TimeTableVO;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

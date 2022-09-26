@@ -2,10 +2,6 @@ package com.example.chota.main;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.viewpager2.widget.ViewPager2;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +10,10 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
+
 import com.example.chota.R;
-import com.example.chota.WriteActivity;
 import com.example.chota.common.Common;
 import com.example.chota.common.CommonVal;
 import com.example.chota.school.SchoolActivity;

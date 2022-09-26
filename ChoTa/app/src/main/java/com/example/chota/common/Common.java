@@ -6,9 +6,7 @@ import android.util.Log;
 
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.chota.R;
 import com.example.chota.conn.CommonConn;
-import com.example.chota.school.SchoolpostVO;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

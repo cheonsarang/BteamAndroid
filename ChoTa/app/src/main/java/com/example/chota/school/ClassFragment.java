@@ -1,24 +1,19 @@
 package com.example.chota.school;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.chota.R;
-
-
-import androidx.fragment.app.Fragment;
-import androidx.gridlayout.widget.GridLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.util.Log;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.chota.R;
 import com.example.chota.common.CommonVal;
 import com.example.chota.conn.CommonConn;
 import com.google.android.material.tabs.TabLayout;
@@ -30,7 +25,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class ClassFragment extends Fragment implements View.OnClickListener {
     TabLayout tabs_class;

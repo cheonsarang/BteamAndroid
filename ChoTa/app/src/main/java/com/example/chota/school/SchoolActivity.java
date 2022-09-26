@@ -1,19 +1,15 @@
 package com.example.chota.school;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import com.example.chota.R;
 import com.example.chota.chat.chatFragment;
-import com.google.android.material.tabs.TabLayout;
-
-import org.checkerframework.checker.units.qual.C;
 
 public class SchoolActivity extends AppCompatActivity {
 

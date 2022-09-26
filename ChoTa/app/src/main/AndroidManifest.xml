@@ -81,12 +81,6 @@
             android:name=".education.PlayActivity"
             android:exported="true" />
         <activity
-            android:name=".main.HomeActivity"
-            android:exported="true" />
-        <activity
-            android:name=".school.SchoolActivity"
-            android:exported="true" />
-        <activity
             android:name=".myInfo.Schedule_Activity"
             android:exported="true" />
         <activity
