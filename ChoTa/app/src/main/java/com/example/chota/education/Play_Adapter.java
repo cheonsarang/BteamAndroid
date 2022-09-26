@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.chota.R;
-import com.example.chota.common.CommonVal;
 
 import java.util.ArrayList;
 

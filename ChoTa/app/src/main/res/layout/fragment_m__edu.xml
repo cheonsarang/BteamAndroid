@@ -62,7 +62,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1,468 포맷필요"
+                            android:text="1,468"
                             android:fontFamily="@font/othic"
                             android:textSize="18dp"
                             android:textColor="#FFE300"
@@ -224,7 +224,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/container_edu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"    />
 
             <LinearLayout
                 android:id="@+id/edu4_school"

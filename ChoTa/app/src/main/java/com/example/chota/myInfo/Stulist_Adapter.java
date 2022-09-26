@@ -50,7 +50,6 @@ public class Stulist_Adapter extends RecyclerView.Adapter<Stulist_Adapter.ViewHo
             profile_info = v.findViewById(R.id.profile_info);
             stu_name_info = v.findViewById(R.id.stu_name_info);
             nickname = v.findViewById(R.id.nickname);
-            ban = v.findViewById(R.id.ban);
             parent_phone = v.findViewById(R.id.parent_phone);
             phone_num = v.findViewById(R.id.phone_num);
         }

@@ -52,7 +52,7 @@ public class MyInfo_Adapter extends RecyclerView.Adapter<MyInfo_Adapter.ViewHold
             title_write = v.findViewById(R.id.title_write);
 
         }
-        public void bind(@NonNull MyInfo_Adapter.ViewHolder holder, int position) {
+        public void bind(@NonNull ViewHolder holder, int position) {
             holder.board_name.setText(scrap_list.get(position).getBoard_name());
             holder.writer.setText(scrap_list.get(position).getWriter());
             holder.writedate.setText(scrap_list.get(position).getWritedate());

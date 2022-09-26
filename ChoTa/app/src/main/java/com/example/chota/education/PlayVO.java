@@ -1,7 +1,5 @@
 package com.example.chota.education;
 
-import com.google.gson.annotations.SerializedName;
-
 public class PlayVO {
   //  @SerializedName("모집시작")
     private String mojibstart;

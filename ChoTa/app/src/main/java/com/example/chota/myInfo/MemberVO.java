@@ -1,7 +1,6 @@
 package com.example.chota.myInfo;
 
 import java.io.Serializable;
-import java.sql.Date;
 
 
 public class MemberVO implements Serializable {

@@ -42,13 +42,12 @@ public class BanAdapter extends RecyclerView.Adapter<BanAdapter.ViewHolder>{
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-       TextView stu_name_info, nickname, ban, phone_num, parent_phone;
+       TextView stu_name_info, nickname, ban, phone_num, parent_phone, grade_info;
         CircleImageView profile_info;
        public ViewHolder(@NonNull View v) {
            super(v);
            stu_name_info = v.findViewById(R.id.stu_name_info);
            nickname = v.findViewById(R.id.nickname);
-           ban = v.findViewById(R.id.ban);
            phone_num = v.findViewById(R.id.phone_num);
            parent_phone = v.findViewById(R.id.parent_phone);
            profile_info = v.findViewById(R.id.profile_info);
@@ -60,7 +59,6 @@ public class BanAdapter extends RecyclerView.Adapter<BanAdapter.ViewHolder>{
             }else {
                 holder.nickname.setText(list.get(i).getNickname());
             }
-            holder.ban.setText(list.get(i).getGrade_class_code().substring(1, 2));
             holder.phone_num.setText(list.get(i).getPhone());
             holder.parent_phone.setText(list.get(i).getParent_phone());
             //holder.profile_info.setImageResource(list.get(i).getProfile());
