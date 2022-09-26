@@ -1,8 +1,10 @@
 package com.example.chota.conn;
 
 import java.util.HashMap;
+import java.util.List;
 
 import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
@@ -26,8 +28,20 @@ public interface ApiInterface {
     @GET("{url}")//GET방식은 BASE URL + URL(맵핑) +?뒤에 나오는 파라메터
     Call<String> getDataGET(@Path("url") String url, @QueryMap HashMap<String, String> parameters);
 
+
     @POST("file.f")
     @Multipart
-    Call<String> sendFile(@Part MultipartBody.Part file); //@FieldMap 접속 되고 추가
+    Call<String> sendFile(@Part MultipartBody.Part file); //@FieldMap 접속 되고 추가  파일만 보낼때
+
+    @POST("andinsert.bo")
+    @Multipart
+    Call<String> sendTest( @Part("vo") RequestBody data , @Part MultipartBody.Part file); //@FieldMap 접속 되고 추가  파일만 보낼때
+
+
+//    @FormUrlEncoded
+//    @POST
+//    Call<String> getData(@Url String url, @FieldMap HashMap<String, Object> parameters);//@FieldMap 접속 되고 추가   파일과데이터 둘다 보낼때 씀
+
+
 }
 

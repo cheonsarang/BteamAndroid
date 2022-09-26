@@ -2,6 +2,7 @@ package com.example.chota.board;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -12,18 +13,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.chota.BellActivity;
 import com.example.chota.R;
+import com.example.chota.conn.CommonConn;
+import com.google.gson.Gson;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Board3Activity extends AppCompatActivity {
     RecyclerView recv_reply;
-    ImageView image_back, image_bell, image_reply_ok, image_smile, image_heart, image_scrap;
-    TextView tv_title, tv_id, tv_date, tv_time, tv_read_count, tv_category, tv_content;
+    ImageView image_back, image_bell, image_reply_ok, image_smile, image_heart, image_scrap, image_picture;
+    TextView tv_title, tv_id, tv_date, tv_time, tv_readcnt, tv_category, tv_content;
     LinearLayout linear_heart, linear_scrap, linear_share;
     EditText edt_reply;
-    ArrayList<CommentDTO> list = new ArrayList<>();
+    ArrayList<CommentVO> list = new ArrayList<>();
+    BoardVO vo;
 
 
 
@@ -39,27 +46,44 @@ public class Board3Activity extends AppCompatActivity {
         image_scrap = findViewById(R.id.image_scrap);
         image_reply_ok = findViewById(R.id.image_reply_ok);
         image_smile = findViewById(R.id.image_smile);
+        image_picture = findViewById(R.id.image_picture);
 
 
         tv_title = findViewById(R.id.tv_title);
         tv_id = findViewById(R.id.tv_id);
         tv_date = findViewById(R.id.tv_date);
         tv_time = findViewById(R.id.tv_time);
-        tv_read_count = findViewById(R.id.tv_read_count);
+        tv_readcnt = findViewById(R.id.tv_readcnt);
         tv_category = findViewById(R.id.tv_category);
         tv_content = findViewById(R.id.tv_content);
 
-        linear_heart = findViewById(R.id.linear_heart);
-        linear_scrap = findViewById(R.id.linear_scrap);
-        linear_share = findViewById(R.id.linear_share);
-        edt_reply = findViewById(R.id.edt_reply);
+        linear_heart = findViewById(R.id.linear_heart);//좋아요
+        linear_scrap = findViewById(R.id.linear_scrap);//스크랩
+        linear_share = findViewById(R.id.linear_share);//공유하기
 
-        recv_reply = findViewById(R.id.recv_reply);
 
-        list.add(new CommentDTO("카페가는 시츄", "16", "수학여행 취소되고...겨우 간 건 안전체험인데 선생님들께서 10월 마지막 날에 당일치기라도 가자고 엄청 그러시긴 했는데 오늘 교장선생님 바뀌셔서 또 취소될까봐 불안...", "공감"));
-        list.add(new CommentDTO("카페가는 시츄", "16", "수학여행 취소되고...겨우 간 건 안전체험인데 선생님들께서 10월 마지막 날에 당일치기라도 가자고 엄청 그러시긴 했는데 오늘 교장선생님 바뀌셔서 또 취소될까봐 불안...", "공감"));
-        list.add(new CommentDTO("카페가는 시츄", "16", "수학여행 취소되고...겨우 간 건 안전체험인데 선생님들께서 10월 마지막 날에 당일치기라도 가자고 엄청 그러시긴 했는데 오늘 교장선생님 바뀌셔서 또 취소될까봐 불안...", "공감"));
-        list.add(new CommentDTO("카페가는 시츄", "16", "수학여행 취소되고...겨우 간 건 안전체험인데 선생님들께서 10월 마지막 날에 당일치기라도 가자고 엄청 그러시긴 했는데 오늘 교장선생님 바뀌셔서 또 취소될까봐 불안...", "공감"));
+        //인텐트값 가져오기(상세보기)
+        Intent intent = getIntent();
+        BoardVO vo1 = (BoardVO) intent.getSerializableExtra("vo");
+        CommonConn conn = new CommonConn("anddetail.bo", this);
+        conn.addParams("id", vo1.getId()+"");
+        Log.d("id", "onResult: " + vo1.getId()+"");
+        conn.excuteConn(new CommonConn.ConnCallback() {
+            @Override
+            public void onResult(boolean isResult, String data) {
+                Log.d("디테일", "onResult: " + data);
+                vo = new Gson().fromJson(data, BoardVO.class);
+                setWidget(vo);
+            }
+        });
+
+
+
+
+        edt_reply = findViewById(R.id.edt_reply);//댓글쓰기
+
+        recv_reply = findViewById(R.id.recv_reply); //댓글리스트
+
         //댓글 보여주기
         Board3_Adapter adapter = new Board3_Adapter(getLayoutInflater(), list);
         LinearLayoutManager manager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
@@ -85,7 +109,7 @@ public class Board3Activity extends AppCompatActivity {
 
 
 
-        //좋아요 눌렀을때
+        //좋아요 눌렀을때 (쿼리문 좋아요 넣어야함)
         linear_heart.setOnClickListener(new View.OnClickListener() {
             int count = 0;
 
@@ -101,7 +125,7 @@ public class Board3Activity extends AppCompatActivity {
         });
 
 
-        //스크랩 눌렀을때
+        //스크랩 눌렀을때 (쿼리문 스크랩 넣어야함)
         linear_scrap.setOnClickListener(new View.OnClickListener() {
             int count = 0;
 
@@ -135,5 +159,39 @@ public class Board3Activity extends AppCompatActivity {
 
 
     }
+
+
+    public void setWidget(BoardVO vo){
+        tv_title.setText(vo.getTitle());
+        tv_id.setText(vo.getWriter());
+        tv_date.setText(vo.getWritedate().substring(0, 10));
+        tv_time.setText(vo.getWritedate().substring(11, 16));
+        tv_readcnt.setText(vo.getReadcnt()+"");
+        tv_category.setText(vo.getBoard_name());
+        tv_content.setText(vo.getContent());
+
+
+       // String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
+        //image_picture
+        if(vo.getFile_path() == null){
+            image_picture.setVisibility(View.GONE);
+        }else{
+            // Glide로 이미지 표시하기
+            String image_filepath = vo.getFile_path();
+            Glide.with(this).load(image_filepath).into(image_picture);
+
+            Glide.with(this).load(image_filepath)
+                    .placeholder(R.drawable.ic_bell)
+                    .error(R.drawable.ic_belloff)
+                    .into(image_picture);
+        }
+
+
+
+    }
+
+
+
 
 }

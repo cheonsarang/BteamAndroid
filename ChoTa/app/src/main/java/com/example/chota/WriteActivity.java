@@ -21,6 +21,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,8 +30,10 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
 import com.bumptech.glide.Glide;
+import com.example.chota.board.BoardFileVO;
 import com.example.chota.board.BoardVO;
 import com.example.chota.common.CommonMethod;
+import com.example.chota.common.CommonVal;
 import com.example.chota.conn.ApiClient;
 import com.example.chota.conn.ApiInterface;
 import com.example.chota.conn.CommonConn;
@@ -39,10 +42,14 @@ import com.google.gson.Gson;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
+import okhttp3.Request;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -53,7 +60,13 @@ public class WriteActivity extends AppCompatActivity {
     Spinner spinner;
     EditText edt_title, edt_content;
     LinearLayout linear_photo;
-    ImageView image_photo;
+    ImageView image_photo1, image_photo2, image_photo3;
+    BoardVO vo = new BoardVO();
+    ArrayList<BoardFileVO> list;
+    BoardFileVO filevo = new BoardFileVO();
+
+
+    ActivityResultLauncher<Intent> launcher; //startActivityForResult 대신 나온 신버전 방식.
 
 
 
@@ -72,7 +85,9 @@ public class WriteActivity extends AppCompatActivity {
         edt_title = findViewById(R.id.edt_title);
         edt_content = findViewById(R.id.edt_content);
         linear_photo = findViewById(R.id.linear_photo);
-        image_photo = findViewById(R.id.image_photo);
+        image_photo1 = findViewById(R.id.image_photo1);
+        image_photo2 = findViewById(R.id.image_photo2);
+        image_photo3 = findViewById(R.id.image_photo3);
 
 
 
@@ -84,16 +99,16 @@ public class WriteActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
                 if(i == 1){
                     tv_spinner.setText("자유게시판");
+                    spinner.setSelection(i);
                 }else if(i == 2){
                     tv_spinner.setText("공부게시판");
+                    spinner.setSelection(i);
                 }else if(i == 3){
                     tv_spinner.setText("관심게시판");
+                    spinner.setSelection(i);
                 }else if(i == 4){
-                    tv_spinner.setText("고민상담게시판");
-                }else if(i == 5){
-                    tv_spinner.setText("우리학교게시판");
-                }else if(i == 6){
-                    tv_spinner.setText("우리반게시판");
+                    tv_spinner.setText("고민게시판");
+                    spinner.setSelection(i);
                 }
             }
 
@@ -119,22 +134,52 @@ public class WriteActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 if(CommonMethod.isCheckEditText(edt_title)&&CommonMethod.isCheckEditText(edt_content) &&!tv_spinner.getText().toString().equals("")){
-                    BoardVO vo = new BoardVO();
-                    vo.setBoard_title(edt_title.getText()+"");
-                    vo.setBoard_content(edt_content.getText()+"");
-                    vo.setBoard_id(spinner.getSelectedItemPosition());
 
-                    CommonConn conn = new CommonConn("detail", WriteActivity.this);
+                    vo.setTitle(edt_title.getText()+"");
+                    vo.setContent(edt_content.getText()+"");
+                    vo.setBoard_group_id(spinner.getSelectedItemPosition());
+                    vo.setWriter(CommonVal.loginInfo.getUserid()+"");
+                    vo.setMember_grp(CommonVal.loginInfo.getMember_grp());
+                    vo.setBoard_name(tv_spinner.getText()+"");
+
+
+
+
+                    RequestBody fileBody = RequestBody.create(MediaType.parse("image/jpeg"), new File(imgFilePath)); //MediaType은 무슨타입인지 지정, 스트링형태의 파일패스
+                    MultipartBody.Part filePart = MultipartBody.Part.createFormData("file", "test.jpg", fileBody);//첫번째 데이터는 이름, 두번째는 실제 파일이름, 세번째는 만들어진 파일바디
+
+                    RequestBody dataTest =
+                            RequestBody.create(
+                                    MediaType.parse("multipart/form-data"), new Gson().toJson(vo));
+                    ApiInterface apiInterface = ApiClient.getApiclient().create(ApiInterface.class);
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            apiInterface.sendTest( dataTest , filePart ).enqueue(new Callback<String>() {
+                                @Override
+                                public void onResponse(Call<String> call, Response<String> response) {
+
+                                }
+
+                                @Override
+                                public void onFailure(Call<String> call, Throwable t) {
+
+                                }
+                            });
+                        }
+                    }).start();
+/*
+                    CommonConn conn = new CommonConn("andinsert.bo", WriteActivity.this);
                     conn.addParams("vo", new Gson().toJson(vo));
+                   // submit(image_photo1.toString());
                     conn.excuteConn(new CommonConn.ConnCallback() {
                         @Override
                         public void onResult(boolean isResult, String data) {
-                            Log.d("detail", "onResult: 값 : " + data);
+                            Log.d("andinsert.bo", "onResult: 값 : " + data);
                         }
-                    });
+                    });*/
 
                 }
-
 
                 onBackPressed();
             }
@@ -142,14 +187,38 @@ public class WriteActivity extends AppCompatActivity {
 
 
 
-        //사진업로드 눌렀을때
-        image_photo.setOnClickListener( v -> {
-            tv_photo.setVisibility(View.GONE);
+        //사진1 눌렀을때
+        image_photo1.setOnClickListener( v -> {
             // 카메라로 사진을 업데이트 할건지 (실시간 찍기)
             // 갤러리로 사진을 찍어놓은걸 할건지 ( 저장된것사용 )
             showDialog();
 
         });
+
+        //사진2 눌렀을때
+        image_photo2.setOnClickListener( v -> {
+
+            // 카메라로 사진을 업데이트 할건지 (실시간 찍기)
+            // 갤러리로 사진을 찍어놓은걸 할건지 ( 저장된것사용 )
+            showDialog();
+
+        });
+
+        //사진3 눌렀을때
+        image_photo3.setOnClickListener( v -> {
+            // 카메라로 사진을 업데이트 할건지 (실시간 찍기)
+            // 갤러리로 사진을 찍어놓은걸 할건지 ( 저장된것사용 )
+            showDialog();
+
+        });
+
+
+
+        //구버전 방식 => 없어질일은 없어보임.
+       /* Intent intent1 = new Intent(JoinActivity.this  , LoginActivity.class);
+        startActivityForResult(intent1, 1000);//코드 상수로 final<-
+        */
+        //결과를 가져와야함 (다음액티비티가 꺼지고)
 
     }//oncreate()
 
@@ -212,7 +281,6 @@ public class WriteActivity extends AppCompatActivity {
 
     }// showDialog
 
-
     public String imgFilePath;
     //임시파일저장소 메소드
     private File createFile(){
@@ -234,8 +302,9 @@ public class WriteActivity extends AppCompatActivity {
         imgFilePath = rtnFile.getAbsolutePath();    //절대파일?
 
         return rtnFile;
+    }
 
-    }//createFile()
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -245,29 +314,30 @@ public class WriteActivity extends AppCompatActivity {
             // Intent Data 형태로 주는 경로는 사실 사진파일의 실제 경로가 x
             Log.d("갤러리", "onActivityResult: " + data.getData());
             Log.d("갤러리", "onActivityResult: " + data.getData().getPath());
-            String img_path = getRealPath(data.getData());
-            Glide.with(WriteActivity.this).load(img_path).into(image_photo);    //사진붙히기
+            imgFilePath = getRealPath(data.getData());
+            String img_path = imgFilePath;
+            Glide.with(WriteActivity.this).load(img_path).into(image_photo1);    //사진붙히기
 
             //MultiPart 형태로 전송 ~ File ~
             submit(img_path);
 
         }else if( requestCode == CAMERA_CODE && resultCode == RESULT_OK ){
-            Glide.with(WriteActivity.this).load(imgFilePath).into(image_photo);
+            Glide.with(WriteActivity.this).load(imgFilePath).into(image_photo1);
 
             submit(imgFilePath);
         }
         // resultCode <= startActivityForResult를 실행할때 보내줬던 코드( 어떤 작업이 끈나고 이메소드가 왔는지를 구분할 수 있는 키)
-    }//onActivityResult()
+    }
 
     //스프링전송메소드
     public void submit(String path){
-        RequestBody fileBody = RequestBody.create(MediaType.parse("image/jpeg"), new File(path));
-        MultipartBody.Part filePart = MultipartBody.Part.createFormData("file", "test.jpg", fileBody);
-        ApiInterface apiInterface = ApiClient.getRetrofit().create(ApiInterface.class);
+        RequestBody fileBody = RequestBody.create(MediaType.parse("image/jpeg"), new File(path)); //MediaType은 무슨타입인지 지정, 스트링형태의 파일패스
+        MultipartBody.Part filePart = MultipartBody.Part.createFormData("file", "test.jpg", fileBody);//첫번째 데이터는 이름, 두번째는 실제 파일이름, 세번째는 만들어진 파일바디
+        ApiInterface apiInterface = ApiClient.getApiclient().create(ApiInterface.class);
         apiInterface.sendFile(filePart).enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-
+            Log.d("file.f의 결과는??", "response : " + response);
             }
 
             @Override
@@ -275,9 +345,9 @@ public class WriteActivity extends AppCompatActivity {
 
             }
         });
-    }//submit
+    }
 
-    //리얼패스
+
     public String getRealPath(Uri contentUri){
         String res = null;  //리턴용
         String[] proj = {MediaStore.Images.Media.DATA}; //저장소에 있는 이미지들을 일단 전부가져옴.
@@ -291,11 +361,15 @@ public class WriteActivity extends AppCompatActivity {
         return res;
     }
 
+
+
+
+
     // 권한레벨 - 낮음 : 인터넷 - 사용하겠다고 메니페스트에 명시만하면 OK
     // 권한레벨 - 중간 : 유튜브 - 사용하겠다고 메니페스트에 명시 후 queries 로 재명시 해줘야함.
     // 권한레벨 - 높음 : 위치 , 카메라 , 갤러리(파일저장소) - 사용하겠다고 메니페스트에 명시 후 , 쿼리스로도 명시 후 사용자 동의.
     private void checkDangerousPermissions() {
-        String[] permissions = {
+        String[] permissions = {            //권한을 배열에 넣음
                 Manifest.permission.CAMERA,
                 Manifest.permission.ACCESS_MEDIA_LOCATION,
                 Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -326,7 +400,7 @@ public class WriteActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if(requestCode == 1){
+        if(requestCode == 1){   //리퀘스트코드를 받아옴
             for (int i = 0 ; i< permissions.length ; i++){
                 if ( grantResults[i] == PackageManager.PERMISSION_GRANTED){
                     Log.d("TAG", "권한 승인 됨: " + permissions[i]);

@@ -1,6 +1,7 @@
 package com.example.chota.join;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.example.chota.R;
+import com.example.chota.conn.CommonConn;
 
 
 public class Join1Fragment extends Fragment {
@@ -44,12 +46,22 @@ public class Join1Fragment extends Fragment {
         btn_id_chk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 idChk(edt_id);
             }
         });
 
         //비밀번호 확인할때
-        tvPwChk(edt_pw_chk);
+        edt_pw_chk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                for(int i = 0; i < edt_pw_chk.getText().length(); i++){
+                    tvPwChk(edt_pw_chk);
+                }
+
+            }
+        });
+
 
 
 
@@ -59,15 +71,10 @@ public class Join1Fragment extends Fragment {
             public void onClick(View v) {
 
 
-
-
-
-
-
                 //원래코드
                 if(edt_id.getText().toString().equals("") || edt_pw.getText().toString().equals("")
-                        || edt_pw_chk.getText().toString().equals("") || !btn_id_chk.callOnClick() || !tvPwChk(edt_pw_chk)){
-                    if(!btn_id_chk.callOnClick()){
+                        || edt_pw_chk.getText().toString().equals("") || !btn_id_chk.isClickable() || !tvPwChk(edt_pw_chk)){
+                    if(!btn_id_chk.isClickable()){
                         Toast.makeText(getContext(), "아이디 중복체크를 확인해주세요", Toast.LENGTH_SHORT).show();
                     }else if(!tvPwChk(edt_pw_chk)){
                         Toast.makeText(getContext(), "비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show();
@@ -98,23 +105,38 @@ public class Join1Fragment extends Fragment {
     }//onCreateView()
 
     //아이디 중복체크
-    public boolean idChk(EditText id){
-        if(id.getText().toString().equals("admin")) {
-            tv_id_chk_tv.setVisibility(View.VISIBLE);
-            tv_id_chk_tv.setText("아이디가 중복됩니다.");
-            edt_id.setText("");
-            return false;
-        }else if(id.getText().toString().equals("")){
-            tv_id_chk_tv.setVisibility(View.VISIBLE);
-            tv_id_chk_tv.setText("아이디를 입력하세요");
-            edt_id.setText("");
-            return false;
-        }else{
-            tv_id_chk_tv.setVisibility(View.VISIBLE);
-            tv_id_chk_tv.setText("아이디 사용이 가능합니다.");
-            edt_pw.findFocus();
-           return true;
-        }
+    public void idChk(EditText edt_id){
+
+        CommonConn conn = new CommonConn("id_check", getContext());
+        conn.addParams("userid", edt_id.getText()+"");
+        conn.excuteConn(new CommonConn.ConnCallback() {
+            String result = "1";    //중복된 아이디가 있다
+            @Override
+            public void onResult(boolean isResult, String data) {
+                Log.d("중복체크", "onResult: " + data);
+
+                    if (!result.equals(data)) {
+                        tv_id_chk_tv.setVisibility(View.VISIBLE);
+                        tv_id_chk_tv.setText("아이디 사용이 가능합니다.");
+                        edt_pw.findFocus();
+
+
+
+                    } else if (edt_id.getText().toString().equals("")) {
+                        tv_id_chk_tv.setVisibility(View.VISIBLE);
+                        tv_id_chk_tv.setText("아이디를 입력하세요");
+
+
+                    } else{
+                        tv_id_chk_tv.setVisibility(View.VISIBLE);
+                        tv_id_chk_tv.setText("아이디가 중복됩니다.");
+                        edt_id.setText("");
+
+                    }
+
+            }
+        });
+
     }
 
 
@@ -124,15 +146,14 @@ public class Join1Fragment extends Fragment {
             tv_pw_chk_tv.setVisibility(View.VISIBLE);
             tv_pw_chk_tv.setText("비밀번호가 불일치합니다.");
             //edt_pw_chk.setText("");
-            return false;
 
         }else if(pw_chk.getText().toString().equals(edt_pw.getText().toString())){
             //tv_pw_chk_tv.setVisibility(View.VISIBLE);
             tv_pw_chk_tv.setText("비밀번호가 일치합니다.");
-            return true;
+
         }else if(pw_chk.getText().toString().length() == 0){
             tv_pw_chk_tv.setVisibility(View.GONE);
-            return true;
+
         }
             return false;
     }

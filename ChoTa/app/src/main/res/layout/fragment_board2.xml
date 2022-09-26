@@ -1,151 +1,356 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".board.Board2Fragment"
-    android:orientation="vertical"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginBottom="10dp">
+    android:id="@+id/container">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp">
 
     <HorizontalScrollView
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:scrollbars="none"
         >
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="50dp"
             >
 
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_1"
+            <FrameLayout
+                android:id="@+id/frame_0"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:padding="5dp"
-                app:cardCornerRadius="18dp"
-                android:elevation="5dp"
-                android:layout_margin="5dp"
-
+                android:layout_gravity="center"
                 >
-                <TextView
-                    android:padding="10dp"
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_0"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="자유"
-                    android:layout_gravity="center"/>
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    app:cardCornerRadius="18dp"
+                    android:elevation="5dp"
+                    android:layout_margin="5dp"
+                    android:visibility="visible"
+                    >
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="전체"
+                        android:layout_gravity="center"/>
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_2"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    app:cardCornerRadius="18dp"
+                    android:elevation="5dp"
+                    android:layout_margin="5dp"
+                    android:visibility="invisible"
+                    android:backgroundTint="@color/chota_blue"
+                    >
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="전체"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:padding="5dp"
-                app:cardCornerRadius="18dp"
-                android:elevation="5dp"
-                android:layout_margin="5dp"
-                android:outlineAmbientShadowColor="@color/black"
-
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/frame_0"
+                android:layout_marginLeft="10dp"
                 >
-                <TextView
-                    android:padding="10dp"
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="공부"
-                    android:layout_gravity="center"/>
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    app:cardCornerRadius="18dp"
+                    android:elevation="5dp"
+                    android:layout_margin="5dp"
+                    android:visibility="visible"
+                    >
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="인기"
+                        android:layout_gravity="center"/>
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_3"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    app:cardCornerRadius="18dp"
+                    android:elevation="5dp"
+                    android:layout_margin="5dp"
+                    android:visibility="invisible"
+                    android:backgroundTint="@color/chota_blue"
+                    >
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="인기"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:padding="5dp"
-                app:cardCornerRadius="18dp"
-                android:elevation="5dp"
-                android:layout_margin="5dp"
-                android:outlineAmbientShadowColor="@color/black"
-
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/frame_1"
+                android:layout_marginLeft="10dp"
                 >
-                <TextView
-                    android:padding="10dp"
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="관심"
-                    android:layout_gravity="center"/>
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    app:cardCornerRadius="18dp"
+                    android:elevation="5dp"
+                    android:layout_margin="5dp"
+                    android:visibility="visible"
+                    >
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="자유"
+                        android:layout_gravity="center"/>
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_4"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    app:cardCornerRadius="18dp"
+                    android:elevation="5dp"
+                    android:layout_margin="5dp"
+                    android:visibility="invisible"
+                    android:backgroundTint="@color/chota_blue"
+                    >
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="자유"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/frame_3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:padding="5dp"
-                app:cardCornerRadius="18dp"
-                android:elevation="5dp"
-                android:layout_margin="5dp"
-                android:outlineAmbientShadowColor="@color/black"
-
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/frame_2"
+                android:layout_marginLeft="10dp"
                 >
-                <TextView
-                    android:padding="10dp"
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="고민상담"
-                    android:layout_gravity="center"/>
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    app:cardCornerRadius="18dp"
+                    android:elevation="5dp"
+                    android:layout_margin="5dp"
+                    android:visibility="visible"
+                    >
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="공부"
+                        android:layout_gravity="center"/>
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_5"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    app:cardCornerRadius="18dp"
+                    android:elevation="5dp"
+                    android:layout_margin="5dp"
+                    android:visibility="invisible"
+                    android:backgroundTint="@color/chota_blue"
+                    >
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="공부"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </FrameLayout>
+
+
+
+            <FrameLayout
+                android:id="@+id/frame_4"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:padding="5dp"
-                app:cardCornerRadius="18dp"
-                android:elevation="5dp"
-                android:layout_margin="5dp"
-                android:outlineAmbientShadowColor="@color/black"
-
+                android:layout_toRightOf="@id/frame_3"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
                 >
 
-                <TextView
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_4"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:padding="10dp"
-                    android:text="내 학교" />
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    app:cardCornerRadius="18dp"
+                    android:elevation="5dp"
+                    android:layout_margin="5dp"
+                    android:visibility="visible"
+                    >
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="관심"
+                        android:layout_gravity="center"/>
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_6"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    app:cardCornerRadius="18dp"
+                    android:elevation="5dp"
+                    android:layout_margin="5dp"
+                    android:visibility="invisible"
+                    android:backgroundTint="@color/chota_blue"
+                    >
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="관심"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </FrameLayout>
+
+
+
+            <FrameLayout
+                android:id="@+id/frame_5"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:padding="5dp"
-                app:cardCornerRadius="18dp"
-                android:elevation="5dp"
-                android:layout_margin="5dp"
-                android:outlineAmbientShadowColor="@color/black"
-
+                android:layout_toRightOf="@id/frame_4"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
                 >
-                <TextView
-                    android:padding="10dp"
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_5"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="내 반"
-                    android:layout_gravity="center"/>
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    app:cardCornerRadius="18dp"
+                    android:elevation="5dp"
+                    android:layout_margin="5dp"
+                    android:visibility="visible"
+                    >
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="고민"
+                        android:layout_gravity="center"/>
 
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    app:cardCornerRadius="18dp"
+                    android:elevation="5dp"
+                    android:layout_margin="5dp"
+                    android:visibility="invisible"
+                    android:backgroundTint="@color/chota_blue"
+                    >
+                    <TextView
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="고민"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"/>
+
+                </androidx.cardview.widget.CardView>
 
 
-        </LinearLayout>
+            </FrameLayout>
+
+
+
+        </RelativeLayout>
     </HorizontalScrollView>
+
 
     <View
         android:layout_width="match_parent"
@@ -228,4 +433,21 @@
 
     </ScrollView>
 
-</LinearLayout>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_write"
+        android:layout_gravity="end|bottom"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        app:fabSize="normal"
+        app:elevation="6dp"
+        app:backgroundTint="@color/chota_blue"
+        android:src="@drawable/ic_write"
+        app:tint="@android:color/white"
+
+        />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

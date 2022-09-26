@@ -9,12 +9,12 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 public class ApiClient {
 
 
-    private static final String BASE_URL = "http://192.168.0.58/bteam/";
-    //private static final String BASE_URL = "http://192.168.0.62/bteam/";
+    //private static final String BASE_URL = "http://192.168.0.58/bteam/";
+    private static final String BASE_URL = "http://192.168.0.62/bteam/";
     //private static final String BASE_URL = "http://192.168.0.63:81/bteam/";
     private static Retrofit retrofit;
 
-    public static Retrofit getRetrofit() {
+    public static Retrofit getApiclient() {
         if(retrofit == null){
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)

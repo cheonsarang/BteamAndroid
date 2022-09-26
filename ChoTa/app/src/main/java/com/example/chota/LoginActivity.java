@@ -68,13 +68,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Log.d("공유자원", "onCreate: " + userid + " : " + userpw);
 
         //자동 로그인기능
-        if(!userid.equals("--") && !userpw.equals("--")) {
+
+        if (!userid.equals("--") && !userpw.equals("--")) {
             chk_login.setChecked(true);
             edt_id.setText(userid);
             edt_pw.setText(userpw);
             login();    //<- 만들어진 기능은 로직에 따라서 다시 사용이 가능하게 한다.
         }
-
     }
 
     @Override

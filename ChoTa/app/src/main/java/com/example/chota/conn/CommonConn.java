@@ -52,7 +52,7 @@ public class CommonConn {
         this.callback = callback;
 
 
-        ApiInterface apiInterface = ApiClient.getRetrofit().create(ApiInterface.class);
+        ApiInterface apiInterface = ApiClient.getApiclient().create(ApiInterface.class);
         Call<String> call = apiInterface.getData(url, params);
       /*  if(dialog == null) return;
         dialog.setProgress(ProgressDialog.STYLE_SPINNER);   //0쓰지 말고 상수로 쓰기

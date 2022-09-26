@@ -15,10 +15,10 @@ import java.util.ArrayList;
 
 public class Board3_Adapter extends RecyclerView.Adapter<Board3_Adapter.ViewHoler>{
     LayoutInflater inflater;
-    ArrayList<CommentDTO> list;
-    CommentDTO dto;
+    ArrayList<CommentVO> list;
+    CommentVO dto;
 
-    public Board3_Adapter(LayoutInflater inflater, ArrayList<CommentDTO> list) {
+    public Board3_Adapter(LayoutInflater inflater, ArrayList<CommentVO> list) {
         this.inflater = inflater;
         this.list = list;
     }

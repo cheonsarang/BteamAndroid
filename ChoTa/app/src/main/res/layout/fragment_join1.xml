@@ -31,7 +31,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
+        android:padding="3dp"
         app:cardCornerRadius="5dp"
         android:elevation="1dp"
         android:backgroundTint="@color/grey_light"
@@ -54,7 +54,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="아이디를 입력하세요"
-                android:textSize="15dp"
+                android:textSize="17dp"
                 android:background="@color/grey_light"
                 />
 
