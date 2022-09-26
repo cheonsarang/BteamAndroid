@@ -61,6 +61,9 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
     public void search(String charText) {
         if(charText.length() == 0) {
             list.addAll(arrayList);

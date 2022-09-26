@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview"
+        android:visibility="visible"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/counsel_linear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="상담 권장 시간 주중 9시 ~ 3시"
+                android:layout_marginBottom="10dp"
+                />
+
+            <Button
+                android:id="@+id/counsel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="선생님과 상담"/>
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+</RelativeLayout>

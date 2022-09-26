@@ -4,117 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".school.ClassFragment"
     android:background="@color/grey_light"
-    >
+    android:orientation="vertical"
+    tools:context=".school.ClassFragment">
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs_class"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/transparent"
         app:tabGravity="fill"
         app:tabMode="fixed"
         app:tabSelectedTextColor="@color/green"
-        app:tabTextColor="#333"
-        android:background="@color/transparent"
-        />
+        app:tabTextColor="#333" />
 
-    <LinearLayout
-        android:layout_marginTop="-3dp"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/white"
-        >
+        android:layout_height="0dp"
+        android:layout_marginTop="-3dp"
+        android:layout_weight="1"
+        android:background="@color/white">
 
-        <FrameLayout
+        <!-- 알림장, 일정, 자유게시판 -->
+        <ListView
+            android:id="@+id/class_listView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="#FFEE58"
+            android:visibility="visible" />
+
+        <!-- 시간표 -->
+        <LinearLayout
+            android:id="@+id/class_timetable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="@color/grey_light"
+            >
 
             <LinearLayout
-                android:id="@+id/linear_class1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="visible">
-
-                <ListView
-                    android:id="@+id/listView_class1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:listSelector="#FFEE58"
-                    android:divider="@null"
-                    android:dividerHeight="0dp"
-                    android:background="@color/white"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linear_class2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="invisible">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="500dp"
-                    android:src="@drawable/class_calendar"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linear_class3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="invisible">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:src="@drawable/class_schedule"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linear_class4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="invisible">
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                >
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="상담" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linear_class5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="invisible">
-
-                <ListView
-                    android:id="@+id/listView_class5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:listSelector="#FFEE58"
-                    android:divider="@null"
-                    android:dividerHeight="0dp"
-                    android:background="@color/white"
+                    android:text="시간표"
+                    android:textSize="16dp"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
                     />
 
+                <TextView
+                    android:id="@+id/timetable_thisweek"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="11월 1번째 주"
+                    android:textColor="#333"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    />
+
+
             </LinearLayout>
 
-        </FrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/class_timetable_recv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            />
 
-    </LinearLayout>
+        </LinearLayout>
 
+        <!-- 상담 -->
+        <LinearLayout
+            android:id="@+id/class_counsel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+    </FrameLayout>
 
 </LinearLayout>

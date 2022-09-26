@@ -13,10 +13,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
@@ -30,10 +32,25 @@ import java.util.Date;
 
 
 public class Join2Fragment extends Fragment {
+
+    //기본정보 - 아이디, 비번
+    String id;
+    String pw;
+
+    //이름, 생년월일(8자 숫자만), 휴대폰(11자 숫자만), 보호자 휴대폰(선택, 11자 숫자만), 학교검색, 학년, 반, 닉네임(선택)
     EditText edt_name, edt_birth, edt_phone1, edt_phone2, edt_school, edt_grade, edt_class, edt_nickname;
+
+    //프로필(선택, 기본 이미지 보여주기)
     ImageView imgv_profile;
+
+    //성별
     RadioGroup rdo_grp;
-    RadioButton rdo_man, rdo_woman;
+    RadioButton rdo_man, rdo_woman, rdo_no;
+
+    //멤버 그룹 - 선생님(T)
+    CheckBox chk_teacher;
+
+    //마지막 버튼
     Button btn_next, btn_prev;
 
 
@@ -42,6 +59,20 @@ public class Join2Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_join2, container, false);
 
+        Bundle b = getArguments();
+        if(b != null){
+            if(b.getString("socialID") != null){
+                id = b.getString("socialID");
+                pw = "";
+            }else{
+                id = b.getString("id");
+                pw = b.getString("pw");
+            }
+            Log.d("TAG", "onCreateView: " + id);
+            Log.d("TAG", "onCreateView: " + pw);
+        }
+
+        //EditText 이름, 생년월일(8자 숫자만), 휴대폰(11자 숫자만), 보호자 휴대폰(선택, 11자 숫자만), 학교검색, 학년, 반, 닉네임(선택)
         edt_name = v.findViewById(R.id.edt_name);
         edt_birth = v.findViewById(R.id.edt_birth);
         edt_phone1 = v.findViewById(R.id.edt_phone1);
@@ -50,14 +81,23 @@ public class Join2Fragment extends Fragment {
         edt_grade = v.findViewById(R.id.edt_grade);
         edt_class = v.findViewById(R.id.edt_class);
         edt_nickname = v.findViewById(R.id.edt_nickname);
+
+        //ImageView 프로필(선택, 기본 이미지 보여주기)
         imgv_profile = v.findViewById(R.id.imgv_profile);
+
+        //Radio 성별
         rdo_grp = v.findViewById(R.id.rdo_grp);
         rdo_man = v.findViewById(R.id.rdo_man);
         rdo_woman = v.findViewById(R.id.rdo_woman);
+        rdo_no = v.findViewById(R.id.rdo_no);
+
+        //CheckBox 멤버 그룹 - 선생님(T)
+        chk_teacher = v.findViewById(R.id.chk_teacher);
+
+        //Button
         btn_next = v.findViewById(R.id.btn_next);
         btn_prev = v.findViewById(R.id.btn_prev);
-
-
+        
         //생년월일 눌렀을때
         edt_birth.setOnClickListener(new View.OnClickListener() {
             @Override

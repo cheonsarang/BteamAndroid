@@ -16,16 +16,13 @@ import androidx.fragment.app.Fragment;
 import com.example.chota.R;
 import com.example.chota.conn.CommonConn;
 
-
 public class Join1Fragment extends Fragment {
-
     EditText edt_id, edt_pw, edt_pw_chk;
     TextView tv_id_chk_tv, tv_pw_chk_tv;
     Button btn_id_chk, btn_next, btn_prev;
-    ImageButton imgb_kakao, imgb_naver;
+    Bundle b = new Bundle();
 
-
-
+    Join2Fragment join2Fragment = new Join2Fragment();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,7 +43,6 @@ public class Join1Fragment extends Fragment {
         btn_id_chk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 idChk(edt_id);
             }
         });
@@ -61,8 +57,6 @@ public class Join1Fragment extends Fragment {
 
             }
         });
-
-
 
 
         //다음버튼 눌렀을때
@@ -83,11 +77,16 @@ public class Join1Fragment extends Fragment {
                         Toast.makeText(getContext(), "빈 칸을 채워주세요", Toast.LENGTH_SHORT).show();
                     }
                 }else{
-                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new Join2Fragment()).commit();
+                    b.putString("id", edt_id.getText().toString());
+                    b.putString("pw", edt_pw.getText().toString());
+                    //b.putSerializable();
+                    join2Fragment.setArguments(b);
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, join2Fragment).commit();
+
+
                 }
             }
         });
-
 
         //뒤로가기 버튼 눌렀을때
         btn_prev.setOnClickListener(new View.OnClickListener() {
@@ -96,10 +95,6 @@ public class Join1Fragment extends Fragment {
                 getActivity().finish();
             }
         });
-
-
-
-
 
         return v;
     }//onCreateView()
@@ -155,7 +150,7 @@ public class Join1Fragment extends Fragment {
             tv_pw_chk_tv.setVisibility(View.GONE);
 
         }
-            return false;
+        return false;
     }
 
 

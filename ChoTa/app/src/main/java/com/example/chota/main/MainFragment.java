@@ -15,15 +15,21 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.example.chota.R;
+import com.example.chota.WriteActivity;
 import com.example.chota.common.Common;
+import com.example.chota.common.CommonVal;
+import com.example.chota.school.SchoolActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class MainFragment extends Fragment implements View.OnClickListener {
 
+    FloatingActionButton btn_write;
+
     LinearLayout main2_school_set, main4_scrap, main4_mine, main7_bob, main7_schedule, main8_board, main9_counsel, main10_edu_locate, main10_edu_book;
 
-    TextView main8_tv1, main8_tv2, main8_tv3, main8_tv4, main8_tv5, main8_tv6, main8_tv7, main8_tv8;
+    TextView main2_id, main8_tv1, main8_tv2, main8_tv3, main8_tv4, main8_tv5, main8_tv6, main8_tv7, main8_tv8;
 
     GridView gridview;
 
@@ -36,9 +42,16 @@ public class MainFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_main, container, false);
         scrollView = v.findViewById(R.id.scrollView);
+
+        /* 버튼 */
+        btn_write = v.findViewById(R.id.btn_write);
+
         /* 메인2 이벤트 연결 등 */
         main2_school_set = v.findViewById(R.id.main2_school_set);
         main2_school_set.setOnClickListener(this);
+        main2_id = v.findViewById(R.id.main2_id);
+
+        main2_id.setText(CommonVal.loginInfo.getName());
 
         /* 메인3 - 주요서비스 */
         gridview = v.findViewById(R.id.gridview);
@@ -101,6 +114,17 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         main10_edu_book = v.findViewById(R.id.main10_edu_book);
         main10_edu_locate.setOnClickListener(this);
         main10_edu_book.setOnClickListener(this);
+
+
+        /* 글쓰기 버튼 */
+        btn_write.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SchoolActivity.class);
+                intent.putExtra("index", 9);
+                startActivity(intent);
+            }
+        });
 
         return v;
     }

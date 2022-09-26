@@ -51,6 +51,27 @@
         android:theme="@style/Theme.ChoTa"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".chat.SpecificChatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chat.UpdateProfile"
+            android:exported="true" />
+        <activity
+            android:name=".chat.ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chat.chatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".chat.setProfile"
+            android:exported="true" />
+        <activity
+            android:name=".chat.otpAuthentication"
+            android:exported="true" />
+        <activity
+            android:name=".chat.ChatMainActivity"
+            android:exported="true" />
+        <activity
             android:name=".board.Board3Activity"
             android:exported="true" />
         <activity
@@ -59,7 +80,6 @@
         <activity
             android:name=".education.PlayActivity"
             android:exported="true" />
-
         <activity
             android:name=".main.HomeActivity"
             android:exported="true" />
